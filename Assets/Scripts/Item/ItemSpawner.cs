@@ -11,7 +11,6 @@ public class ItemSpawner : MonoBehaviour
     [Tooltip("Set this to a transform slightly above your tray")]
     public Transform spawnPoint;
 
-    // These methods will be linked to your UI Buttons
     public void SpawnBall()
     {
         SpawnItem(ballPrefab);
@@ -43,6 +42,6 @@ public class ItemSpawner : MonoBehaviour
 
         // Spawn the item at the spawn point with no rotation
         Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-        Debug.Log($"Spawned {prefab.name} onto the tray.");
+        Debug.Log($"Spawned {prefab.name} onto tray");
     }
 }

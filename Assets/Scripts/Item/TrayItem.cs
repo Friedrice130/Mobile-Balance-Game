@@ -22,7 +22,7 @@ public class TrayItem : MonoBehaviour
 
     void Update()
     {
-        // If the item falls below the tray (e.g., Y position drops below -5)
+        // If the item falls below the tray
         if (transform.position.y < -5f && !isDestroyed)
         {
             TriggerGameOver("Item fell off the tray!");
@@ -46,7 +46,6 @@ public class TrayItem : MonoBehaviour
         isDestroyed = true;
         Debug.LogWarning($"[GAME OVER] {reason}");
 
-        // Optional: Destroy the item or trigger a visual explosion/break effect here
         Destroy(gameObject);
     }
 }

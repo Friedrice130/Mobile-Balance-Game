@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class UIManager : MonoBehaviour
     public GameObject pauseButton;
     public Slider sensitivitySlider;
     public Toggle invertToggle;
+    public GameObject ballButton;
+    public GameObject bookButton;
+    public GameObject drinkButton;
 
     [Header("Game References")]
     public TrayBalancer trayBalancer;
@@ -28,6 +32,10 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f; 
         pauseMenuPanel.SetActive(true);
         pauseButton.SetActive(false);
+        ballButton.SetActive(false);
+        bookButton.SetActive(false);
+        drinkButton.SetActive(false);
+
     }
 
     public void ResumeGame()
@@ -35,6 +43,9 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f; 
         pauseMenuPanel.SetActive(false);
         pauseButton.SetActive(true);
+        ballButton.SetActive(true);
+        bookButton.SetActive(true);
+        drinkButton.SetActive(true);
     }
 
     public void OnInvertToggled(bool isToggled)
@@ -51,5 +62,11 @@ public class UIManager : MonoBehaviour
         {
             trayBalancer.tiltSensitivity = sliderValue;
         }
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
