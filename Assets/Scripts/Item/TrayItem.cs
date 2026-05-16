@@ -1,7 +1,5 @@
 using UnityEngine;
 
-using UnityEngine;
-
 [RequireComponent(typeof(Rigidbody))]
 public class TrayItem : MonoBehaviour
 {
@@ -27,7 +25,7 @@ public class TrayItem : MonoBehaviour
         // If the item falls below the tray (e.g., Y position drops below -5)
         if (transform.position.y < -5f && !isDestroyed)
         {
-            TriggerGameOver("Item fell off the tray!");
+            TriggerGameOver("Item fell off the trayS");
         }
     }
 
@@ -38,7 +36,7 @@ public class TrayItem : MonoBehaviour
             // collision.relativeVelocity tells us how hard the impact was
             if (collision.relativeVelocity.magnitude > breakForceThreshold)
             {
-                TriggerGameOver($"{itemName} shattered on impact!");
+                TriggerGameOver($"{itemName} fragile item broke!");
             }
         }
     }
