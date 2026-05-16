@@ -25,7 +25,7 @@ public class TrayItem : MonoBehaviour
         // If the item falls below the tray (e.g., Y position drops below -5)
         if (transform.position.y < -5f && !isDestroyed)
         {
-            TriggerGameOver("Item fell off the trayS");
+            TriggerGameOver("Item fell off the tray!");
         }
     }
 
