@@ -8,7 +8,9 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenuPanel;
     public GameObject pauseButton;
     public Slider sensitivitySlider;
+    public Slider angleSlider;
     public Toggle invertToggle;
+
     public GameObject ballButton;
     public GameObject bookButton;
     public GameObject drinkButton;
@@ -21,6 +23,7 @@ public class UIManager : MonoBehaviour
         if (trayBalancer != null)
         {
             sensitivitySlider.value = trayBalancer.tiltSensitivity;
+            angleSlider.value = trayBalancer.maxTiltAngle;
             invertToggle.isOn = trayBalancer.invertTilt;
         }
 
@@ -61,6 +64,14 @@ public class UIManager : MonoBehaviour
         if (trayBalancer != null)
         {
             trayBalancer.tiltSensitivity = sliderValue;
+        }
+    }
+
+    public void OnAngleChanged(float sliderValue)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.maxTiltAngle = sliderValue;
         }
     }
 
