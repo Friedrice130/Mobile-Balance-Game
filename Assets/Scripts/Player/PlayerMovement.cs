@@ -5,26 +5,35 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f;
-    public float strafeSpeed = 10f;
+    public float topSpeed = 5f;
+    public float acceleration = 5f;
+
+    [Header("Strafe Settings")]
+    public float strafeSensitivity = 15f; // How far a drag moves the player
     public float maxStrafeX = 4f;
+    public float strafeSmoothness = 10f;
     
     private Rigidbody rb;
-    private float currentXPosition;
+    private float targetXPosition;
+    private float currentForwardSpeed;
+    private bool isHolding;
+    private float inputDeltaX;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
 
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+
         // Track starting X position
-        currentXPosition = transform.position.x;
+        targetXPosition = transform.position.x;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        bool isHolding = false;
-        float inputDeltaX = 0f;
+        isHolding = false;
+        inputDeltaX = 0f;
 
         // Mobile Touch Input
         if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
@@ -42,20 +51,26 @@ public class PlayerMovement : MonoBehaviour
             inputDeltaX = Mouse.current.delta.ReadValue().x * 0.05f;
         }
 
-        // Apply movement if holding
         if (isHolding)
         {
-            // Move Forward
-            Vector3 forwardMove = Vector3.forward * moveSpeed * Time.fixedDeltaTime;
-            Vector3 newPosition = rb.position + forwardMove;
-
-            // Strafe Sideways
-            currentXPosition += inputDeltaX * strafeSpeed;
-            currentXPosition = Mathf.Clamp(currentXPosition, -maxStrafeX, maxStrafeX);
-            newPosition.x = currentXPosition;
-
-            // Apply final position
-            rb.MovePosition(newPosition);
+            targetXPosition += inputDeltaX * strafeSensitivity;
+            targetXPosition = Mathf.Clamp(targetXPosition, -maxStrafeX, maxStrafeX);
         }
+    }
+
+    void FixedUpdate()
+    {
+        // Move Forward
+        float targetSpeed = isHolding ? topSpeed : 0f;
+        currentForwardSpeed = Mathf.Lerp(currentForwardSpeed, targetSpeed, acceleration * Time.fixedDeltaTime);
+
+        // Strafe Sideways
+        float newXPosition = Mathf.Lerp(rb.position.x, targetXPosition, strafeSmoothness * Time.fixedDeltaTime);
+
+        // Apply final movement
+        Vector3 forwardMove = Vector3.forward * currentForwardSpeed * Time.fixedDeltaTime;
+        Vector3 newPosition = new Vector3(newXPosition, rb.position.y, rb.position.z) + forwardMove;
+
+        rb.MovePosition(newPosition);
     }
 }
