@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class TrayBalancer : MonoBehaviour
 {
+    [Header("Physics Anchor")]
+    public Transform targetAnchor;
+
     [Header("Tilt Settings")]
     public float maxTiltAngle = 45f;
     public float tiltSmoothness = 15f;
@@ -13,10 +16,15 @@ public class TrayBalancer : MonoBehaviour
     [Tooltip("How much physical wrist movement is required. Higher = less wrist turning needed.")]
     public float tiltSensitivity = 1.5f;
 
+    private Rigidbody rb;
     private float currentTiltAngle = 0f;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+
         if (Accelerometer.current != null)
         {
             InputSystem.EnableDevice(Accelerometer.current);
@@ -25,6 +33,8 @@ public class TrayBalancer : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (targetAnchor == null) return;
+        
         float targetTilt = 0f;
 
         // Mobile Accelerometer Input
@@ -53,7 +63,8 @@ public class TrayBalancer : MonoBehaviour
 
         currentTiltAngle = Mathf.Lerp(currentTiltAngle, targetTilt, tiltSmoothness * Time.fixedDeltaTime);
 
-        // Apply the rotation
-        transform.localRotation = Quaternion.Euler(0f, 0f, -currentTiltAngle);
+        rb.MovePosition(targetAnchor.position);
+        Quaternion localTilt = Quaternion.Euler(0f, 0f, -currentTiltAngle);
+        rb.MoveRotation(targetAnchor.rotation * localTilt);
     }
 }

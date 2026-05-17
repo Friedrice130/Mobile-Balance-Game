@@ -41,7 +41,7 @@ public class ItemSpawner : MonoBehaviour
         }
 
         // Spawn the item at the spawn point with no rotation
-        Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
         Debug.Log($"Spawned {prefab.name} onto tray");
     }
 }
