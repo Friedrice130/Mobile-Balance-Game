@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 180172165435394508}
   - component: {fileID: 650339478057514833}
   - component: {fileID: 5172563673684454557}
-  - component: {fileID: 7733190420890324932}
+  - component: {fileID: 137723115966342096}
   - component: {fileID: 4531839274296342858}
   - component: {fileID: 8253068510575212626}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Drink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,14 +93,14 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7733190420890324932
+--- !u!64 &137723115966342096
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3598637869739424621}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d93255e02cd86744598464460347d5cc, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
