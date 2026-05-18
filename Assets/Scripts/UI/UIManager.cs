@@ -28,6 +28,14 @@ public class UIManager : MonoBehaviour
     {
         if (trayBalancer != null)
         {
+            // Load Saved Settings
+            trayBalancer.tiltSensitivity = PlayerPrefs.GetFloat("SavedSensitivity", trayBalancer.tiltSensitivity);
+            trayBalancer.maxTiltAngle = PlayerPrefs.GetFloat("SavedAngle", trayBalancer.maxTiltAngle);
+            
+            int defaultInvert = trayBalancer.invertTilt ? 1 : 0;
+            trayBalancer.invertTilt = PlayerPrefs.GetInt("SavedInvert", defaultInvert) == 1;
+
+            // Sync UI
             sensitivitySlider.value = trayBalancer.tiltSensitivity;
             angleSlider.value = trayBalancer.maxTiltAngle;
             invertToggle.isOn = trayBalancer.invertTilt;
@@ -89,30 +97,6 @@ public class UIManager : MonoBehaviour
         drinkButton.SetActive(true);
     }
 
-    public void OnInvertToggled(bool isToggled)
-    {
-        if (trayBalancer != null)
-        {
-            trayBalancer.invertTilt = isToggled;
-        }
-    }
-
-    public void OnSensitivityChanged(float sliderValue)
-    {
-        if (trayBalancer != null)
-        {
-            trayBalancer.tiltSensitivity = sliderValue;
-        }
-    }
-
-    public void OnAngleChanged(float sliderValue)
-    {
-        if (trayBalancer != null)
-        {
-            trayBalancer.maxTiltAngle = sliderValue;
-        }
-    }
-
     public void ShowGameOver(string reason)
     {
         pauseButton.SetActive(false);
@@ -126,6 +110,39 @@ public class UIManager : MonoBehaviour
         }
         
         gameOverPanel.SetActive(true);
+    }
+
+    public void OnInvertToggled(bool isToggled)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.invertTilt = isToggled;
+
+            PlayerPrefs.SetInt("SavedInvert", isToggled ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void OnSensitivityChanged(float sliderValue)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.tiltSensitivity = sliderValue;
+
+            PlayerPrefs.SetFloat("SavedSensitivity", sliderValue);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void OnAngleChanged(float sliderValue)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.maxTiltAngle = sliderValue;
+
+            PlayerPrefs.SetFloat("SavedAngle", sliderValue);
+            PlayerPrefs.Save();
+        }
     }
 
     public void RestartGame()
