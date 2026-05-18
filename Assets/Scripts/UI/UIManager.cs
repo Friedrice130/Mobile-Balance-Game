@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     public GameObject drinkButton;
 
     public TextMeshProUGUI countdownText;
+    public TextMeshProUGUI timerText;
     public GameObject gameOverPanel;
     public TextMeshProUGUI gameOverReasonText;
 
@@ -110,6 +111,34 @@ public class UIManager : MonoBehaviour
         }
         
         gameOverPanel.SetActive(true);
+    }
+
+    public void UpdateTimerDisplay(float timeInSeconds)
+    {
+        if (timerText == null) return;
+
+        int minutes = Mathf.FloorToInt(timeInSeconds / 60f);
+        int seconds = Mathf.FloorToInt(timeInSeconds % 60f);
+
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        if (timeInSeconds <= 10f)
+        {
+            timerText.color = Color.red;
+        }
+        else
+        {
+            timerText.color = Color.white;
+        }
+    }
+
+    public void SetInfiniteTimerDisplay()
+    {
+        if (timerText != null)
+        {
+            timerText.text = "∞";
+            timerText.color = Color.white;
+        }
     }
 
     public void OnInvertToggled(bool isToggled)

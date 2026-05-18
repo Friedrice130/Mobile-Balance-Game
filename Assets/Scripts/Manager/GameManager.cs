@@ -6,9 +6,16 @@ public enum GameState { Countdown, Playing, GameOver }
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    
+    [Header("Game State")]
     public GameState currentState;
     public UIManager uiManager;
+
+    [Header("Timer Settings")]
+    public bool isInfiniteTime = false;
+    public float levelTimeInSeconds = 60f;
+
+    private float currentTime;
 
     void Awake()
     {
@@ -24,10 +31,36 @@ public class GameManager : MonoBehaviour
     private IEnumerator StartLevelRoutine()
     {
         currentState = GameState.Countdown;
+
+        if (uiManager != null)
+        {
+            if (isInfiniteTime) uiManager.SetInfiniteTimerDisplay();
+            else uiManager.UpdateTimerDisplay(levelTimeInSeconds);
+        }
         
         yield return StartCoroutine(uiManager.PlayCountdownUI());
 
+        currentTime = levelTimeInSeconds;
         currentState = GameState.Playing;
+    }
+
+    void Update()
+    {
+        if (currentState == GameState.Playing && !isInfiniteTime)
+        {
+            currentTime -= Time.deltaTime;
+
+            if (currentTime <= 0f)
+            {
+                currentTime = 0f;
+                TriggerGameOver("Time's Up!");
+            }
+            
+            if (uiManager != null)
+            {
+                uiManager.UpdateTimerDisplay(currentTime);
+            }
+        }
     }
 
     public void TriggerGameOver(string reason)
