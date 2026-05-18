@@ -34,6 +34,9 @@ public class TrayBalancer : MonoBehaviour
     void FixedUpdate()
     {
         if (targetAnchor == null) return;
+
+        // Only allow tray to tilt if the game state is Playing
+        if (GameManager.Instance != null && GameManager.Instance.currentState != GameState.Playing) return;
         
         float targetTilt = 0f;
 

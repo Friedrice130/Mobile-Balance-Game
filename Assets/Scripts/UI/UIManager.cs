@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,6 +17,10 @@ public class UIManager : MonoBehaviour
     public GameObject bookButton;
     public GameObject drinkButton;
 
+    public TextMeshProUGUI countdownText;
+    public GameObject gameOverPanel;
+    public TextMeshProUGUI gameOverReasonText;
+
     [Header("Game References")]
     public TrayBalancer trayBalancer;
 
@@ -27,7 +33,39 @@ public class UIManager : MonoBehaviour
             invertToggle.isOn = trayBalancer.invertTilt;
         }
 
-        ResumeGame();
+        Time.timeScale = 1f; 
+        pauseMenuPanel.SetActive(false);
+    }
+
+    public IEnumerator PlayCountdownUI()
+    {
+        // Hide pause & spawn buttons during countdown
+        pauseButton.SetActive(false);
+        ballButton.SetActive(false);
+        bookButton.SetActive(false);
+        drinkButton.SetActive(false);
+
+        countdownText.gameObject.SetActive(true);
+
+        countdownText.text = "3";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.text = "2";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.text = "1";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.text = "START!";
+        yield return new WaitForSeconds(1f);
+
+        countdownText.gameObject.SetActive(false);
+
+        // Turn buttons back on
+        pauseButton.SetActive(true);
+        ballButton.SetActive(true);
+        bookButton.SetActive(true);
+        drinkButton.SetActive(true);
     }
 
     public void PauseGame()
@@ -73,6 +111,21 @@ public class UIManager : MonoBehaviour
         {
             trayBalancer.maxTiltAngle = sliderValue;
         }
+    }
+
+    public void ShowGameOver(string reason)
+    {
+        pauseButton.SetActive(false);
+        ballButton.SetActive(false);
+        bookButton.SetActive(false);
+        drinkButton.SetActive(false);
+
+        if (gameOverReasonText != null)
+        {
+            gameOverReasonText.text = reason;
+        }
+        
+        gameOverPanel.SetActive(true);
     }
 
     public void RestartGame()

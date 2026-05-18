@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
         isHolding = false;
         inputDeltaX = 0f;
 
+        // Only allow input if the game state is Playing
+        if (GameManager.Instance != null && GameManager.Instance.currentState != GameState.Playing) return;
+
         // Do not process any input when game paused
         if (Time.timeScale == 0f) return;
 

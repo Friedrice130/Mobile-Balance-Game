@@ -36,15 +36,20 @@ public class TrayItem : MonoBehaviour
             // collision.relativeVelocity tells us how hard the impact was
             if (collision.relativeVelocity.magnitude > breakForceThreshold)
             {
-                TriggerGameOver($"{itemName} fragile item broke!");
+                TriggerGameOver($"You lose! {itemName} fragile item broke.");
             }
         }
     }
 
     private void TriggerGameOver(string reason)
     {
+        if (isDestroyed) return;
         isDestroyed = true;
-        Debug.LogWarning($"[GAME OVER] {reason}");
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.TriggerGameOver(reason);
+        }
 
         Destroy(gameObject);
     }
