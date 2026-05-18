@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public enum GameState { Countdown, Playing, GameOver }
+public enum GameState { Countdown, Playing, GameOver, GameWin }
 
 public class GameManager : MonoBehaviour
 {
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
                 currentTime = 0f;
                 TriggerGameOver("Time's Up!");
             }
-            
+
             if (uiManager != null)
             {
                 uiManager.UpdateTimerDisplay(currentTime);
@@ -76,6 +76,21 @@ public class GameManager : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.ShowGameOver(reason);
+        }
+    }
+
+    public void TriggerGameWin()
+    {
+        if (currentState == GameState.GameOver || currentState == GameState.GameWin) return;
+
+        currentState = GameState.GameWin;
+        Debug.Log("You win! Level Complete.");
+
+        Time.timeScale = 0f;
+
+        if (uiManager != null)
+        {
+            uiManager.ShowGameWin();
         }
     }
 }

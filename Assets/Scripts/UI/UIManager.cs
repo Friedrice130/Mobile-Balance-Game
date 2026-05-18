@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject gameOverPanel;
     public TextMeshProUGUI gameOverReasonText;
+    public GameObject gameWinPanel;
 
     [Header("Game References")]
     public TrayBalancer trayBalancer;
@@ -44,6 +45,7 @@ public class UIManager : MonoBehaviour
 
         Time.timeScale = 1f; 
         pauseMenuPanel.SetActive(false);
+        gameWinPanel.SetActive(false);
     }
 
     public IEnumerator PlayCountdownUI()
@@ -111,6 +113,19 @@ public class UIManager : MonoBehaviour
         }
         
         gameOverPanel.SetActive(true);
+    }
+
+    public void ShowGameWin()
+    {
+        pauseButton.SetActive(false);
+        ballButton.SetActive(false);
+        bookButton.SetActive(false);
+        drinkButton.SetActive(false);
+        
+        if (gameWinPanel != null)
+        {
+            gameWinPanel.SetActive(true);
+        }
     }
 
     public void UpdateTimerDisplay(float timeInSeconds)
