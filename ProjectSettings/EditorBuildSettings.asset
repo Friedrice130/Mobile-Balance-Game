@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JoyceScene/Item.unity
-    guid: 939b78091d9c2e0499044630780a1eb0
+    path: Assets/Scenes/JoyceScene/MainMenu.unity
+    guid: 83ce5a9792f8e834a817dfe9b50dc5dd
+  - enabled: 1
+    path: Assets/Scenes/AngelScene/PlayerMovement.unity
+    guid: 36a8990ee68aa8f4e82251e0caf533aa
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
