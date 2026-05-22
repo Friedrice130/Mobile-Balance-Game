@@ -13,6 +13,20 @@ public class PlayerMovement : MonoBehaviour
     public float strafeSensitivity = 15f; // How far a drag moves the player
     public float maxStrafeX = 4f;
     public float strafeSmoothness = 10f;
+
+    [Header("Terrain Interaction")]
+    public LayerMask groundLayer;
+    [Tooltip("How high from the player base the laser starts")]
+    public float groundCheckHeight = 1f; 
+    [Tooltip("The normal height of the player center from the floor")]
+    public float groundOffset = 1f; 
+    
+    [Tooltip("Higher = sharper, more violent bumps. Lower = smooth, wave-like bumps")]
+    public float bumpHarshness = 20f; 
+    
+    public bool alignToSlopes = true;
+    [Tooltip("How fast the tray tilts when entering a ramp")]
+    public float slopeSmoothness = 10f;
     
     private Rigidbody rb;
     private float targetXPosition;
@@ -96,10 +110,37 @@ public class PlayerMovement : MonoBehaviour
         // Strafe Sideways
         float newXPosition = Mathf.Lerp(rb.position.x, targetXPosition, strafeSmoothness * Time.fixedDeltaTime);
 
+        // Terrain Detection
+        float newYPosition = rb.position.y;
+        Quaternion targetRotation = rb.rotation;
+
+        Vector3 rayStart = new Vector3(newXPosition, rb.position.y + groundCheckHeight, rb.position.z);
+
+        Debug.DrawRay(rayStart, Vector3.down * (groundCheckHeight * 2f), Color.red);
+
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, groundCheckHeight * 2f, groundLayer))
+        {
+            // Handle Bumps (Adjust Y position based on terrain height)
+            float targetY = hit.point.y + groundOffset;
+            newYPosition = Mathf.Lerp(rb.position.y, targetY, bumpHarshness * Time.fixedDeltaTime);
+
+            // Handle Ramps (Tilt the player based on the angle of the terrain)
+            if (alignToSlopes)
+            {
+                Quaternion slopeRotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+                targetRotation = Quaternion.Slerp(rb.rotation, slopeRotation, slopeSmoothness * Time.fixedDeltaTime);
+            }
+        }
+        else
+        {
+            targetRotation = Quaternion.Slerp(rb.rotation, Quaternion.identity, slopeSmoothness * Time.fixedDeltaTime);
+        }
+
         // Apply final movement
         Vector3 forwardMove = Vector3.forward * currentForwardSpeed * Time.fixedDeltaTime;
-        Vector3 newPosition = new Vector3(newXPosition, rb.position.y, rb.position.z) + forwardMove;
+        Vector3 newPosition = new Vector3(newXPosition, newYPosition, rb.position.z) + forwardMove;
 
         rb.MovePosition(newPosition);
+        rb.MoveRotation(targetRotation);
     }
 }
