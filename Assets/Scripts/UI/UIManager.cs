@@ -10,13 +10,19 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenuPanel;
     public GameObject pauseButton;
     public Slider sensitivitySlider;
-    public Slider angleSlider;
-    public Toggle invertToggle;
 
+    [Header("Tilt UI Settings")]
+    public Slider angleSliderLR; // Left/Right Angle
+    public Slider angleSliderFB; // Front/Back Angle
+    public Toggle invertToggleLR; // Left/Right Invert
+    public Toggle invertToggleFB; // Front/Back Invert
+
+    [Header("Temp Item Buttons")]
     public GameObject ballButton;
     public GameObject bookButton;
     public GameObject drinkButton;
 
+    [Header("Screens & Text")]
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI timerText;
     public GameObject gameOverPanel;
@@ -30,17 +36,25 @@ public class UIManager : MonoBehaviour
     {
         if (trayBalancer != null)
         {
-            // Load Saved Settings
+            // Load Saved Settings (Left/Right)
             trayBalancer.tiltSensitivity = PlayerPrefs.GetFloat("SavedSensitivity", trayBalancer.tiltSensitivity);
-            trayBalancer.maxTiltAngle = PlayerPrefs.GetFloat("SavedAngle", trayBalancer.maxTiltAngle);
-            
-            int defaultInvert = trayBalancer.invertTilt ? 1 : 0;
-            trayBalancer.invertTilt = PlayerPrefs.GetInt("SavedInvert", defaultInvert) == 1;
+            trayBalancer.maxTiltAngleLR = PlayerPrefs.GetFloat("SavedAngleLR", trayBalancer.maxTiltAngleLR);
+            int defaultInvertLR = trayBalancer.invertTiltLR ? 1 : 0;
+            trayBalancer.invertTiltLR = PlayerPrefs.GetInt("SavedInvertLR", defaultInvertLR) == 1;
+
+            // Load Saved Settings (Front/Back)
+            trayBalancer.maxTiltAngleFB = PlayerPrefs.GetFloat("SavedAngleFB", trayBalancer.maxTiltAngleFB);
+            int defaultInvertFB = trayBalancer.invertTiltFB ? 1 : 0;
+            trayBalancer.invertTiltFB = PlayerPrefs.GetInt("SavedInvertFB", defaultInvertFB) == 1;
 
             // Sync UI
             sensitivitySlider.value = trayBalancer.tiltSensitivity;
-            angleSlider.value = trayBalancer.maxTiltAngle;
-            invertToggle.isOn = trayBalancer.invertTilt;
+
+            if (angleSliderLR != null) angleSliderLR.value = trayBalancer.maxTiltAngleLR;
+            if (angleSliderFB != null) angleSliderFB.value = trayBalancer.maxTiltAngleFB;
+            
+            if (invertToggleLR != null) invertToggleLR.isOn = trayBalancer.invertTiltLR;
+            if (invertToggleFB != null) invertToggleFB.isOn = trayBalancer.invertTiltFB;
         }
 
         Time.timeScale = 1f; 
@@ -156,17 +170,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnInvertToggled(bool isToggled)
-    {
-        if (trayBalancer != null)
-        {
-            trayBalancer.invertTilt = isToggled;
-
-            PlayerPrefs.SetInt("SavedInvert", isToggled ? 1 : 0);
-            PlayerPrefs.Save();
-        }
-    }
-
     public void OnSensitivityChanged(float sliderValue)
     {
         if (trayBalancer != null)
@@ -178,13 +181,42 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OnAngleChanged(float sliderValue)
+    public void OnAngleLRChanged(float sliderValue)
     {
         if (trayBalancer != null)
         {
-            trayBalancer.maxTiltAngle = sliderValue;
+            trayBalancer.maxTiltAngleLR = sliderValue;
+            PlayerPrefs.SetFloat("SavedAngleLR", sliderValue);
+            PlayerPrefs.Save();
+        }
+    }
 
-            PlayerPrefs.SetFloat("SavedAngle", sliderValue);
+    public void OnAngleFBChanged(float sliderValue)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.maxTiltAngleFB = sliderValue;
+            PlayerPrefs.SetFloat("SavedAngleFB", sliderValue);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void OnInvertLRToggled(bool isToggled)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.invertTiltLR = isToggled;
+            PlayerPrefs.SetInt("SavedInvertLR", isToggled ? 1 : 0);
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void OnInvertFBToggled(bool isToggled)
+    {
+        if (trayBalancer != null)
+        {
+            trayBalancer.invertTiltFB = isToggled;
+            PlayerPrefs.SetInt("SavedInvertFB", isToggled ? 1 : 0);
             PlayerPrefs.Save();
         }
     }

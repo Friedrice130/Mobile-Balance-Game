@@ -6,10 +6,16 @@ public class TrayBalancer : MonoBehaviour
     [Header("Physics Anchor")]
     public Transform targetAnchor;
 
-    [Header("Tilt Settings")]
-    public float maxTiltAngle = 45f;
+    [Header("Tilt Settings - Left/Right")]
+    public float maxTiltAngleLR = 45f;
+    public bool invertTiltLR = false;
+
+    [Header("Tilt Settings - Front/Back")]
+    public float maxTiltAngleFB = 30f;
+    public bool invertTiltFB = false;
+
+    [Header("Shared Settings")]
     public float tiltSmoothness = 15f;
-    public bool invertTilt = false;
 
     [Header("Player Preferences")]
     [Range(0.5f, 3f)]
@@ -17,7 +23,8 @@ public class TrayBalancer : MonoBehaviour
     public float tiltSensitivity = 1.5f;
 
     private Rigidbody rb;
-    private float currentTiltAngle = 0f;
+    private float currentTiltAngleLR = 0f;
+    private float currentTiltAngleFB = 0f;
 
     void Start()
     {
@@ -35,39 +42,54 @@ public class TrayBalancer : MonoBehaviour
     {
         if (targetAnchor == null) return;
 
-        // Only allow tray to tilt if the game state is Playing
+        // Only allow tray to tilt if game state is Playing
         if (GameManager.Instance != null && GameManager.Instance.currentState != GameState.Playing) return;
         
-        float targetTilt = 0f;
+        float targetTiltLR = 0f;
+        float targetTiltFB = 0f;
 
         // Mobile Accelerometer Input
         if (Accelerometer.current != null)
         {
-            // Get the raw phone tilt (-1 to 1)
-            float rawAccelX = Accelerometer.current.acceleration.ReadValue().x;
-            
-            // Sensitivity
-            float sensitiveAccelX = rawAccelX * tiltSensitivity;
-            // Avoid the tray to spin upside down
-            sensitiveAccelX = Mathf.Clamp(sensitiveAccelX, -1f, 1f);
+            // x is left/right tilt, y is front/back tilt
+            Vector3 accel = Accelerometer.current.acceleration.ReadValue();
 
-            targetTilt = sensitiveAccelX * maxTiltAngle;
+            // Left/Right (Roll)
+            float sensitiveAccelX = Mathf.Clamp(accel.x * tiltSensitivity, -1f, 1f);
+            targetTiltLR = sensitiveAccelX * maxTiltAngleLR;
+
+            // Front/Back (Pitch)
+            float sensitiveAccelY = Mathf.Clamp(accel.y * tiltSensitivity, -1f, 1f);
+            targetTiltFB = sensitiveAccelY * maxTiltAngleFB;
         }
         // PC Editor Fallback Input
         else if (Keyboard.current != null)
         {
+            // Left/Right
             if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-                targetTilt = -maxTiltAngle;
+                targetTiltLR = -maxTiltAngleLR;
             else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-                targetTilt = maxTiltAngle;
+                targetTiltLR = maxTiltAngleLR;
+
+            // Front/Back
+            if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
+                targetTiltFB = maxTiltAngleFB;
+            else if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
+                targetTiltFB = -maxTiltAngleFB;
         }
 
-        if (invertTilt) targetTilt *= -1f;
+        // Apply inversions if needed
+        if (invertTiltLR) targetTiltLR *= -1f;
+        if (invertTiltFB) targetTiltFB *= -1f;
 
-        currentTiltAngle = Mathf.Lerp(currentTiltAngle, targetTilt, tiltSmoothness * Time.fixedDeltaTime);
+        currentTiltAngleLR = Mathf.Lerp(currentTiltAngleLR, targetTiltLR, tiltSmoothness * Time.fixedDeltaTime);
+        currentTiltAngleFB = Mathf.Lerp(currentTiltAngleFB, targetTiltFB, tiltSmoothness * Time.fixedDeltaTime);
 
+        // Move & Rotate
         rb.MovePosition(targetAnchor.position);
-        Quaternion localTilt = Quaternion.Euler(0f, 0f, -currentTiltAngle);
+
+        // Apply rotation
+        Quaternion localTilt = Quaternion.Euler(currentTiltAngleFB, 0f, -currentTiltAngleLR);
         rb.MoveRotation(targetAnchor.rotation * localTilt);
     }
 }
