@@ -1,42 +1,28 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+
 public class TrayItem : MonoBehaviour
 {
     [Header("Item Properties")]
     public string itemName;
-    public float weight = 1f;
-    public bool isFragile = false;
-    public float breakForceThreshold = 5f; // How hard of an impact breaks it
+    public bool isImportant = false;
 
-    private Rigidbody rb;
     private bool isDestroyed = false;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-
-        // Apply the custom weight to the Rigidbody's mass
-        rb.mass = weight;
-    }
 
     void Update()
     {
-        // If the item falls below the tray
-        if (transform.position.y < -5f && !isDestroyed)
+        if (transform.position.y < 1f && !isDestroyed)
         {
-            TriggerGameOver("Item fell off the tray!");
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (isFragile && !isDestroyed)
-        {
-            // collision.relativeVelocity tells us how hard the impact was
-            if (collision.relativeVelocity.magnitude > breakForceThreshold)
+            if (isImportant)
             {
-                TriggerGameOver($"You lose! {itemName} fragile item broke.");
+                TriggerGameOver($"Game Over: {itemName} (Important) fell off the tray!");
+            }
+            else
+            {
+                isDestroyed = true;
+
+                Destroy(gameObject, 2f);
             }
         }
     }
@@ -51,6 +37,6 @@ public class TrayItem : MonoBehaviour
             GameManager.Instance.TriggerGameOver(reason);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject, 2f);
     }
 }

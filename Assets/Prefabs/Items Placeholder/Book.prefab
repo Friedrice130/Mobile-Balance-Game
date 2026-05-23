@@ -154,6 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: Book
-  weight: 0.001
-  isFragile: 0
-  breakForceThreshold: 0
+  isImportant: 1
