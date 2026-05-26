@@ -100,7 +100,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397170553230762900}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 77f0a8bf5d98fdc42ad84b85c93926b7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -154,6 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: Ball
-  weight: 0.5
-  isFragile: 0
-  breakForceThreshold: 0
+  isImportant: 0
