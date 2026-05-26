@@ -27,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
     public bool alignToSlopes = true;
     [Tooltip("How fast the tray tilts when entering a ramp")]
     public float slopeSmoothness = 10f;
+
+    [Header("Audio Settings")]
+    public SoundData footstepSound; 
+    public float footstepInterval = 0.4f; // How fast the player takes a step
+    private float footstepTimer = 0f;
     
     private Rigidbody rb;
     private float targetXPosition;
@@ -142,5 +147,24 @@ public class PlayerMovement : MonoBehaviour
 
         rb.MovePosition(newPosition);
         rb.MoveRotation(targetRotation);
+
+        if (isHolding && currentForwardSpeed > 0.5f)
+        {
+            footstepTimer -= Time.fixedDeltaTime;
+
+            if (footstepTimer <= 0f)
+            {
+                if (AudioManager.Instance != null && footstepSound != null)
+                {
+                    AudioManager.Instance.PlayAtPoint(footstepSound, transform.position);
+                }
+
+                footstepTimer = footstepInterval;
+            }
+        }
+        else
+        {
+            footstepTimer = 0f;
+        }
     }
 }

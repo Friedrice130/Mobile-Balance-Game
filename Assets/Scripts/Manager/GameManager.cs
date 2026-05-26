@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public bool isInfiniteTime = false;
     public float levelTimeInSeconds = 60f;
 
+    [Header("Audio Settings")]
+    public SoundData TempBGM;
+
     private float currentTime;
 
     void Awake()
@@ -25,6 +28,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (AudioManager.Instance != null && TempBGM != null)
+        {
+            AudioManager.Instance.PlayMusic(TempBGM);
+        }
+        
         StartCoroutine(StartLevelRoutine());
     }
 

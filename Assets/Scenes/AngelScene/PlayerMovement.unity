@@ -569,6 +569,8 @@ MonoBehaviour:
   bumpHarshness: 20
   alignToSlopes: 1
   slopeSmoothness: 10
+  footstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
+  footstepInterval: 0.4
 --- !u!1 &200438029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,7 +1681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000076293945
+      value: -0.00006484985
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1687,6 +1689,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22428984, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
@@ -2248,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sfxMixerGroup: {fileID: -8967923658485623370, guid: 21cc61f1d9dd83e4aaabb0c1e114e70d, type: 2}
-  uiMixerGroup: {fileID: 1215008255620504458, guid: 21cc61f1d9dd83e4aaabb0c1e114e70d, type: 2}
+  uiMixerGroup: {fileID: -8967923658485623370, guid: 21cc61f1d9dd83e4aaabb0c1e114e70d, type: 2}
   musicMixerGroup: {fileID: -976945328624316754, guid: 21cc61f1d9dd83e4aaabb0c1e114e70d, type: 2}
   poolSize: 15
 --- !u!4 &1786548505
@@ -2699,9 +2705,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 715683150}
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
+      propertyPath: TempBGM
+      value: 
+      objectReference: {fileID: 11400000, guid: 39b7b58b24e727c49a69eb2d8b6c6c31, type: 2}
+    - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 175105401}
+    - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
+      propertyPath: isInfiniteTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7184743294963013847, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
