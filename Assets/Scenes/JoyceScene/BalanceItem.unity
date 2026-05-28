@@ -149,8 +149,8 @@ Transform:
   m_GameObject: {fileID: 6610611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.351, z: -44.85}
-  m_LocalScale: {x: 1, y: 0.05, z: 1}
+  m_LocalPosition: {x: -0.0115, y: 2.351, z: -44.7617}
+  m_LocalScale: {x: 1.2153583, y: 0.05, z: 1.1767}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -574,6 +574,8 @@ MonoBehaviour:
   bumpHarshness: 5
   alignToSlopes: 1
   slopeSmoothness: 10
+  footstepSound: {fileID: 0}
+  footstepInterval: 0.4
 --- !u!1 &200438029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,13 +1626,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805290973}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0.07146, y: 0.37, z: 38.07}
+  m_LocalRotation: {x: 0.07718354, y: -0, z: -0, w: 0.9970169}
+  m_LocalPosition: {x: 0.07146, y: 0.5686436, z: 38.675713}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.853, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,7 +2986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5871777907964903050, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6043348232934776234, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_AnchorMax.y
