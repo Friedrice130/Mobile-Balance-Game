@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7556684442463633070}
   - component: {fileID: 466812669873654262}
   m_Layer: 7
-  m_Name: Book
+  m_Name: Book_slow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

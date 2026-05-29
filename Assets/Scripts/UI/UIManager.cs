@@ -244,6 +244,7 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+
     private IEnumerator InitializeAudioMixer(float master, float music, float sfx)
     {
         yield return null;
