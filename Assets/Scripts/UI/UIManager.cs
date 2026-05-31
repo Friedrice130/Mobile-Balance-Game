@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 using UnityEngine.Audio;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -33,11 +34,12 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI timerText;
     public GameObject gameOverPanel;
-    public TextMeshProUGUI gameOverReasonText;
+    // public TextMeshProUGUI gameOverReasonText;
     public GameObject gameWinPanel;
 
     [Header("Game References")]
     public TrayBalancer trayBalancer;
+    public int mainMenuBuildIndex = 0;
 
     void Start()
     {
@@ -138,10 +140,10 @@ public class UIManager : MonoBehaviour
         bookButton.SetActive(false);
         drinkButton.SetActive(false);
 
-        if (gameOverReasonText != null)
-        {
-            gameOverReasonText.text = reason;
-        }
+        // if (gameOverReasonText != null)
+        // {
+        //     gameOverReasonText.text = reason;
+        // }
         
         gameOverPanel.SetActive(true);
     }
@@ -242,6 +244,13 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Time.timeScale = 1f;
+        
+        SceneManager.LoadScene(mainMenuBuildIndex);
     }
 
     private IEnumerator InitializeAudioMixer(float master, float music, float sfx)

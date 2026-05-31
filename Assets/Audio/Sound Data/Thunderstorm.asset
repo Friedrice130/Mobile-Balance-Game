@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Thunderstorm
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
   clips:
-  - {fileID: 8300000, guid: 3c39208caa441734caf3d41f70e0d8b6, type: 3}
+  - {fileID: 8300000, guid: 6d7bd1c0ce88e7f46985d3771fa8e256, type: 3}
   minVolume: 0.8
   maxVolume: 1
   minPitch: 0.9
