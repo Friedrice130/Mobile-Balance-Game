@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2559680500223688517}
   m_Layer: 7
   m_Name: Drink
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,9 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: Drink
-  weight: 2
-  isFragile: 1
-  breakForceThreshold: 3
+  isImportant: 0
 --- !u!64 &2559680500223688517
 MeshCollider:
   m_ObjectHideFlags: 0
