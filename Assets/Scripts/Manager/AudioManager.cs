@@ -94,6 +94,32 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    // Play looping 3D sound
+    public AudioSource PlayLooping3DSound(GameObject targetObject, SoundData data)
+    {
+        if (data == null || data.clips == null || data.clips.Length == 0)
+        {
+            Debug.LogError($"[Audio Error] SoundData is missing or contains no clips on {targetObject.name}");
+            return null;
+        }
+
+        AudioSource source = targetObject.AddComponent<AudioSource>();
+
+        source.clip = data.clips[0];
+        source.loop = true;
+
+        source.spatialBlend = data.spatialBlend;
+        source.minDistance = data.minDistance;
+        source.maxDistance = data.maxDistance;
+        source.volume = data.maxVolume;
+
+        if (sfxMixerGroup != null) source.outputAudioMixerGroup = sfxMixerGroup;
+
+        source.Play();
+        
+        return source;
+    }
+
     // Play UI sound
     public void Play2D(SoundData data)
     {
