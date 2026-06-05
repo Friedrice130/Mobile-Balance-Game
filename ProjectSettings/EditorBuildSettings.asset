@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/JoyceScene/MainMenu.unity
     guid: 83ce5a9792f8e834a817dfe9b50dc5dd
   - enabled: 1
-    path: Assets/Scenes/JoyceScene/BalanceItem.unity
+    path: Assets/Scenes/JoyceScene/Archive/BalanceItem_SlowMovement.unity
     guid: bbd419ed23c9ebf43bbf371382f757a8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
