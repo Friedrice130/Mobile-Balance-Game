@@ -1748,8 +1748,8 @@
     "m_ShaderOutputName": "OutMinMax",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.20000000298023225,
-        "y": 0.25
+        "x": 0.800000011920929,
+        "y": 1.149999976158142
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -2395,8 +2395,8 @@
     "m_ObjectId": "ae88ac09cd4b400892ff2d01e0ae3736",
     "m_Title": "Wobble Group",
     "m_Position": {
-        "x": -2035.2001953125,
-        "y": -1135.199951171875
+        "x": -2035.0,
+        "y": -1133.0
     }
 }
 
