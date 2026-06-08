@@ -6,7 +6,7 @@ PhysicsMaterial:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WinePM
+  m_Name: WineBottlePM
   serializedVersion: 2
   m_DynamicFriction: 1.8
   m_StaticFriction: 1.8
