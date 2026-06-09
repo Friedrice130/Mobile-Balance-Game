@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4150006563596358512}
   - component: {fileID: 6053949738155448981}
   - component: {fileID: 2991761949784027447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: stand5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,9 +102,9 @@ GameObject:
   - component: {fileID: 6006729872089763393}
   - component: {fileID: 8686454752409796927}
   - component: {fileID: 2344924453787294539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CandleStand
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 303255649555752614}
   - component: {fileID: 236340531890528493}
   - component: {fileID: 490253060484427622}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: candle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

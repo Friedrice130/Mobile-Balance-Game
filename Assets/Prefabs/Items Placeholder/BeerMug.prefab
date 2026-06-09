@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5802918336401079627}
   - component: {fileID: 1932440834742886005}
   - component: {fileID: 8110000811317238459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,9 +102,9 @@ GameObject:
   - component: {fileID: 4482406677937342300}
   - component: {fileID: 8329119434494564317}
   - component: {fileID: 2008049717384364820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BeerMug
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 5886645545325028782}
   - component: {fileID: 9220370914559243800}
   - component: {fileID: 2183806476437450905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 8331327941318867477}
   - component: {fileID: 5326991566482292995}
   - component: {fileID: 3180355540228041536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: drink
   m_TagString: Untagged
   m_Icon: {fileID: 0}

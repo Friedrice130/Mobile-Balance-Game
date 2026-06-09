@@ -67,9 +67,9 @@ GameObject:
   - component: {fileID: 3069635936253005030}
   - component: {fileID: 4657225424093143639}
   - component: {fileID: 5138266942683741180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JackBottle
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

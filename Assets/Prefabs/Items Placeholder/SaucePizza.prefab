@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3592994535296206383}
   - component: {fileID: 3458817309461262098}
   - component: {fileID: 2875802694668643580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SaucePizza
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

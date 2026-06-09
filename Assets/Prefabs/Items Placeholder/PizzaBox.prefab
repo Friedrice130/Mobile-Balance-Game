@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6659552795887883064}
   - component: {fileID: 449169421347081198}
   - component: {fileID: 8966477595245714939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PizzaBox
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

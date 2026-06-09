@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4324002713943784996}
   - component: {fileID: 2152391782216143125}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: additional upper collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,9 +66,9 @@ GameObject:
   - component: {fileID: 3550806614196830109}
   - component: {fileID: 2566016507230906605}
   - component: {fileID: 574006221565338410}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WineGlass
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 7653558553799771300}
   - component: {fileID: 7142430188550749818}
   - component: {fileID: 5785920982976102579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: glass mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6186634580496059080}
   - component: {fileID: 1624136569644339048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: additional mid collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 30247723749635326}
   - component: {fileID: 1080476191021533756}
   - component: {fileID: 6420591612518195796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wine mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
