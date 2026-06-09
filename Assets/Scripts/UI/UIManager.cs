@@ -222,6 +222,21 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(mainMenuBuildIndex);
     }
 
+    public void PlayNextLevel()
+    {
+        Time.timeScale = 1f; 
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            Debug.LogWarning("No next scene available in Build Settings");
+        }
+    }
     private IEnumerator InitializeAudioMixer(float master, float music, float sfx)
     {
         yield return null;
@@ -259,4 +274,7 @@ public class UIManager : MonoBehaviour
         SetMixerVolume("SFXVol", value);
         PlayerPrefs.SetFloat("SavedSFXVol", value);
     }
+
+
+
 }
