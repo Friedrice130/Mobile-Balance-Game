@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4546597132105840604
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 216011213069996962}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.338, y: 2.458, z: -45.03}
+  m_LocalPosition: {x: 0.060000002, y: 2.61, z: -45.14}
   m_LocalScale: {x: 0.16379012, y: 0.09864179, z: 0.16379012}
   m_ConstrainProportionsScale: 0
   m_Children:
