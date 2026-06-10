@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7184743294963013847}
   - component: {fileID: 5065059080669269855}
-  - component: {fileID: 3241312872585389258}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -50,19 +49,3 @@ MonoBehaviour:
   isInfiniteTime: 0
   levelTimeInSeconds: 30
   TempBGM: {fileID: 11400000, guid: 39b7b58b24e727c49a69eb2d8b6c6c31, type: 2}
---- !u!114 &3241312872585389258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3019279153407027729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0156bb99d92a006419a0b4ebe62c0148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
-  ballPrefab: {fileID: 1397170553230762900, guid: 20f9d9364a9f85944b04cf5914cd51c5, type: 3}
-  drinkPrefab: {fileID: 3598637869739424621, guid: 2cc6b512e57e2224d95190948f2bda10, type: 3}
-  bookPrefab: {fileID: 8688938272850636762, guid: 24f919084c0f6ca4db299d2090beb603, type: 3}
-  spawnPoint: {fileID: 0}
