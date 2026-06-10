@@ -2,35 +2,22 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    [Header("Item Prefabs")]
-    public GameObject ballPrefab;
-    public GameObject drinkPrefab;
-    public GameObject bookPrefab;
+    [Header("Item Prefab")]
+    public GameObject itemPrefab;
 
     [Header("Spawn Position")]
-    [Tooltip("Set this to a transform slightly above your tray")]
     public Transform spawnPoint;
 
-    public void SpawnBall()
+    private void Start()
     {
-        SpawnItem(ballPrefab);
+        SpawnAssignedItem();
     }
 
-    public void SpawnDrink()
+    public void SpawnAssignedItem()
     {
-        SpawnItem(drinkPrefab);
-    }
-
-    public void SpawnBook()
-    {
-        SpawnItem(bookPrefab);
-    }
-
-    private void SpawnItem(GameObject prefab)
-    {
-        if (prefab == null)
+        if (itemPrefab == null)
         {
-            Debug.LogError("Prefab missing from Spawner script references!");
+            Debug.LogError("No item prefab has been assigned in the Inspector for this scene!");
             return;
         }
 
@@ -40,8 +27,8 @@ public class ItemSpawner : MonoBehaviour
             return;
         }
 
-        // Spawn the item at the spawn point with no rotation
-        Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
-        Debug.Log($"Spawned {prefab.name} onto tray");
+        // Spawn the assigned item at the spawn point
+        Instantiate(itemPrefab, spawnPoint.position, spawnPoint.rotation);
+        Debug.Log($"{itemPrefab.name} spawned onto tray");
     }
 }

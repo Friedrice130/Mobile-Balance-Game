@@ -25,16 +25,10 @@ public class UIManager : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
 
-    [Header("Temp Item Buttons")]
-    public GameObject ballButton;
-    public GameObject bookButton;
-    public GameObject drinkButton;
-
     [Header("Screens & Text")]
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI timerText;
     public GameObject gameOverPanel;
-    // public TextMeshProUGUI gameOverReasonText;
     public GameObject gameWinPanel;
 
     [Header("Game References")]
@@ -83,12 +77,7 @@ public class UIManager : MonoBehaviour
 
     public IEnumerator PlayCountdownUI()
     {
-        // Hide pause & spawn buttons during countdown
         pauseButton.SetActive(false);
-        ballButton.SetActive(false);
-        bookButton.SetActive(false);
-        drinkButton.SetActive(false);
-
         countdownText.gameObject.SetActive(true);
 
         countdownText.text = "3";
@@ -107,9 +96,6 @@ public class UIManager : MonoBehaviour
 
         // Turn buttons back on
         pauseButton.SetActive(true);
-        ballButton.SetActive(true);
-        bookButton.SetActive(true);
-        drinkButton.SetActive(true);
     }
 
     public void PauseGame()
@@ -117,9 +103,6 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f; 
         pauseMenuPanel.SetActive(true);
         pauseButton.SetActive(false);
-        ballButton.SetActive(false);
-        bookButton.SetActive(false);
-        drinkButton.SetActive(false);
 
     }
 
@@ -128,22 +111,11 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f; 
         pauseMenuPanel.SetActive(false);
         pauseButton.SetActive(true);
-        ballButton.SetActive(true);
-        bookButton.SetActive(true);
-        drinkButton.SetActive(true);
     }
 
     public void ShowGameOver(string reason)
     {
         pauseButton.SetActive(false);
-        ballButton.SetActive(false);
-        bookButton.SetActive(false);
-        drinkButton.SetActive(false);
-
-        // if (gameOverReasonText != null)
-        // {
-        //     gameOverReasonText.text = reason;
-        // }
         
         gameOverPanel.SetActive(true);
     }
@@ -151,9 +123,6 @@ public class UIManager : MonoBehaviour
     public void ShowGameWin()
     {
         pauseButton.SetActive(false);
-        ballButton.SetActive(false);
-        bookButton.SetActive(false);
-        drinkButton.SetActive(false);
         
         if (gameWinPanel != null)
         {
@@ -253,6 +222,21 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(mainMenuBuildIndex);
     }
 
+    public void PlayNextLevel()
+    {
+        Time.timeScale = 1f; 
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            Debug.LogWarning("No next scene available in Build Settings");
+        }
+    }
     private IEnumerator InitializeAudioMixer(float master, float music, float sfx)
     {
         yield return null;
@@ -290,4 +274,7 @@ public class UIManager : MonoBehaviour
         SetMixerVolume("SFXVol", value);
         PlayerPrefs.SetFloat("SavedSFXVol", value);
     }
+
+
+
 }

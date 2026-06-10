@@ -1,4 +1,5 @@
 using UnityEngine;
+using CandyCoded.HapticFeedback;
 
 
 public class TrayItem : MonoBehaviour
@@ -17,6 +18,7 @@ public class TrayItem : MonoBehaviour
             if (isImportant)
             {
                 TriggerGameOver($"Game Over: {itemName} (Important) fell off the tray!");
+                HapticFeedback.HeavyFeedback();
             }
             else
             {
