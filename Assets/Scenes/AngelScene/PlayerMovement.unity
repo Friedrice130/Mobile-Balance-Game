@@ -1888,9 +1888,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingHazard
   targetObject: {fileID: 1455508587}
-  outwardPushForce: 2
+  outwardPushForce: 10
   downwardSmashForce: 15
-  snapSound: {fileID: 11400000, guid: c5c861744b3db96469157a1faa911871, type: 2}
+  spinForce: 50
+  snapSound: {fileID: 0}
 --- !u!65 &922940183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1977,12 +1978,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922940181}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 5.37, z: 31.91}
-  m_LocalScale: {x: 10.039337, y: 5.2314286, z: 1.297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 5.37, z: 29.57}
+  m_LocalScale: {x: 10.039337, y: 5.2314286, z: 1.9467971}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1349602995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1066052315
 PrefabInstance:
@@ -2002,7 +2003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000022888184
+      value: -0.0000038146973
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7157,6 +7158,39 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1349602994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349602995}
+  m_Layer: 0
+  m_Name: FallingHazard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349602995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349602994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1455508592}
+  - {fileID: 922940186}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404093562
 GameObject:
   m_ObjectHideFlags: 0
@@ -7330,7 +7364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImpactSound
   smashSound: {fileID: 11400000, guid: 7d7b6b71a41402e49a0eabccbf430055, type: 2}
-  minForceToPlay: 2
+  minForceToPlay: 5
 --- !u!65 &1455508589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7417,13 +7451,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455508586}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.96, y: 7.16, z: 45.86}
-  m_LocalScale: {x: 2, y: 2.5, z: 0.1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.9, y: 7.16, z: 46.19}
+  m_LocalScale: {x: 0.1, y: 2, z: 2.4999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_Father: {fileID: 1349602995}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1482630679
 GameObject:
   m_ObjectHideFlags: 0
@@ -8129,17 +8163,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1906856552 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3241312872585389258, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
-  m_PrefabInstance: {fileID: 6738191757635809002}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0156bb99d92a006419a0b4ebe62c0148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
 --- !u!1 &2028517582
 GameObject:
   m_ObjectHideFlags: 0
@@ -13145,7 +13168,7 @@ PrefabInstance:
     - target: {fileID: 798553898582895433, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1906856552}
+      objectReference: {fileID: 0}
     - target: {fileID: 907409155220778805, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13293,7 +13316,7 @@ PrefabInstance:
     - target: {fileID: 5290312751167484658, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1906856552}
+      objectReference: {fileID: 0}
     - target: {fileID: 6022726408617256357, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13345,7 +13368,7 @@ PrefabInstance:
     - target: {fileID: 8082092542536875270, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1906856552}
+      objectReference: {fileID: 0}
     - target: {fileID: 8623815265148816516, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_Name
       value: UIManager
@@ -13456,8 +13479,7 @@ SceneRoots:
   - {fileID: 1684261822}
   - {fileID: 590446330}
   - {fileID: 1803294850}
-  - {fileID: 1455508592}
-  - {fileID: 922940186}
+  - {fileID: 1349602995}
   - {fileID: 253122781}
   - {fileID: 179412812}
   - {fileID: 6610612}

@@ -4,8 +4,9 @@ public class FallingHazard : MonoBehaviour
 {
     [Header("Hazard Setting")]
     public Rigidbody targetObject;
-    public float outwardPushForce = 2f;
+    public float outwardPushForce = 10f;
     public float downwardSmashForce = 15f;
+    public float spinForce = 50f;
 
     [Header("Audio")]
     public SoundData snapSound;
@@ -21,9 +22,16 @@ public class FallingHazard : MonoBehaviour
             if (targetObject != null)
             {
                 targetObject.isKinematic = false;
-                targetObject.AddForce(targetObject.transform.forward * outwardPushForce, ForceMode.Impulse);
-                targetObject.AddForce(Vector3.down * downwardSmashForce, ForceMode.Impulse);
-                targetObject.AddTorque(new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f)), ForceMode.Impulse);
+                
+                // Combine forces
+                Vector3 smashDirection = (targetObject.transform.forward * outwardPushForce) + (Vector3.down * downwardSmashForce);
+                targetObject.AddForce(smashDirection, ForceMode.Impulse);
+
+                targetObject.AddTorque(new Vector3(
+                    Random.Range(-spinForce, spinForce), 
+                    Random.Range(-spinForce, spinForce), 
+                    Random.Range(-spinForce, spinForce)), 
+                    ForceMode.Impulse);
             }
 
             if (AudioManager.Instance != null && snapSound != null)
