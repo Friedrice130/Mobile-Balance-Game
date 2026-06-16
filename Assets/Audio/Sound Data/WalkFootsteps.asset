@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3529e55651c2864bb498877bc3ae17f, type: 3}
-  m_Name: Footsteps
+  m_Name: WalkFootsteps
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
   clips:
   - {fileID: 8300000, guid: f92200750463c3a4dba7df38cc73da44, type: 3}
@@ -25,5 +25,5 @@ MonoBehaviour:
   minPitch: 0.85
   maxPitch: 1.15
   spatialBlend: 1
-  minDistance: 5
-  maxDistance: 30
+  minDistance: 3
+  maxDistance: 15
