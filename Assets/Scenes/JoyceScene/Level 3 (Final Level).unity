@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &195418498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,6 +564,7 @@ MonoBehaviour:
   targetObject: {fileID: 461263600}
   outwardPushForce: 2
   downwardSmashForce: 15
+  spinForce: 50
   snapSound: {fileID: 11400000, guid: c5c861744b3db96469157a1faa911871, type: 2}
 --- !u!65 &195418499
 BoxCollider:
@@ -1101,7 +1102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &386665771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &461263599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1624,7 +1625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &484574103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12396,7 +12397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2103818041
 Transform:
   m_ObjectHideFlags: 0
