@@ -1,0 +1,8 @@
+Model Information:
+* title:	Balloon Arch
+* source:	https://sketchfab.com/3d-models/balloon-arch-95c3d09a6515445db1b0280ce71372c8
+* author:	NightmareBunny_Officiel (https://sketchfab.com/NightMareBunny_Officiel)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
