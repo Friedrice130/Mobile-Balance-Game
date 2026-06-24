@@ -1,0 +1,11 @@
+Model Information:
+* title:	The Storyteller (Piano)
+* source:	https://sketchfab.com/3d-models/the-storyteller-piano-acffad8101664e3aa253a808a49d1aa7
+* author:	Baptiste.Barbe (https://sketchfab.com/Baptiste.Barbe)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "The Storyteller (Piano)" (https://sketchfab.com/3d-models/the-storyteller-piano-acffad8101664e3aa253a808a49d1aa7) by Baptiste.Barbe (https://sketchfab.com/Baptiste.Barbe) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

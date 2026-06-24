@@ -1,0 +1,11 @@
+Model Information:
+* title:	Small Stage
+* source:	https://sketchfab.com/3d-models/small-stage-e99ae4dc0a10431096712a63e21d7be5
+* author:	ParoxysmKing (https://sketchfab.com/ParoxysmKing)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Small Stage" (https://sketchfab.com/3d-models/small-stage-e99ae4dc0a10431096712a63e21d7be5) by ParoxysmKing (https://sketchfab.com/ParoxysmKing) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

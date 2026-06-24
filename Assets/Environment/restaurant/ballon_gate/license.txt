@@ -1,0 +1,11 @@
+Model Information:
+* title:	BALLON GATE
+* source:	https://sketchfab.com/3d-models/ballon-gate-ff6650a9c31c4292a96e3daf2af743af
+* author:	eventdesignws (https://sketchfab.com/eventdesignws)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "BALLON GATE" (https://sketchfab.com/3d-models/ballon-gate-ff6650a9c31c4292a96e3daf2af743af) by eventdesignws (https://sketchfab.com/eventdesignws) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
