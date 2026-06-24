@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bridge
+* source:	https://sketchfab.com/3d-models/bridge-e4995e5f2df04133a69024419624547e
+* author:	portwindyroad (https://sketchfab.com/portwindyroad)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bridge" (https://sketchfab.com/3d-models/bridge-e4995e5f2df04133a69024419624547e) by portwindyroad (https://sketchfab.com/portwindyroad) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
