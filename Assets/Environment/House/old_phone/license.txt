@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old_Phone
+* source:	https://sketchfab.com/3d-models/old-phone-0721792badbb41ea81f81ec8f1475ed1
+* author:	evika_ren (https://sketchfab.com/evika_ren)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old_Phone" (https://sketchfab.com/3d-models/old-phone-0721792badbb41ea81f81ec8f1475ed1) by evika_ren (https://sketchfab.com/evika_ren) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

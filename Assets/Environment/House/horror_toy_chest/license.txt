@@ -1,0 +1,11 @@
+Model Information:
+* title:	Horror Toy Chest
+* source:	https://sketchfab.com/3d-models/horror-toy-chest-af6bc05358fe45aa9719c26afe76ec85
+* author:	Christopher Turner (https://sketchfab.com/Christopher.260)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Horror Toy Chest" (https://sketchfab.com/3d-models/horror-toy-chest-af6bc05358fe45aa9719c26afe76ec85) by Christopher Turner (https://sketchfab.com/Christopher.260) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
