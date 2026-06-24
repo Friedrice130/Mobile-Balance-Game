@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3529e55651c2864bb498877bc3ae17f, type: 3}
+  m_Name: KidLaughing
+  m_EditorClassIdentifier: Assembly-CSharp::SoundData
+  clips:
+  - {fileID: 8300000, guid: 6475ba302e45f734db2c2337c229013f, type: 3}
+  - {fileID: 8300000, guid: 3f39c3bef451e1442a8d40eec35764ee, type: 3}
+  - {fileID: 8300000, guid: 7f8275ca4056e7d47945ef9d1231d5b7, type: 3}
+  - {fileID: 8300000, guid: e51eed4289cb7e24dabd5a0ba8e2967f, type: 3}
+  - {fileID: 8300000, guid: 05914fa7092691a45a0b56e9fb7aa78b, type: 3}
+  - {fileID: 8300000, guid: e6522076009d69c40af57d80f5849345, type: 3}
+  minVolume: 0.8
+  maxVolume: 1
+  minPitch: 0.9
+  maxPitch: 1.1
+  spatialBlend: 1
+  minDistance: 3
+  maxDistance: 15
