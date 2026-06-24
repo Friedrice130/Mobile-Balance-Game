@@ -5147,15 +5147,12 @@ MonoBehaviour:
   masterSlider: {fileID: 0}
   musicSlider: {fileID: 0}
   sfxSlider: {fileID: 0}
-  ballButton: {fileID: 0}
-  bookButton: {fileID: 0}
-  drinkButton: {fileID: 0}
   countdownText: {fileID: 7775822124153421308}
   timerText: {fileID: 5556528515528707819}
   gameOverPanel: {fileID: 954467433751203297}
-  gameOverReasonText: {fileID: 7865449640147190043}
   gameWinPanel: {fileID: 2501801267708867858}
   trayBalancer: {fileID: 6610616}
+  mainMenuBuildIndex: 0
 --- !u!114 &252608475472028314
 MonoBehaviour:
   m_ObjectHideFlags: 0
