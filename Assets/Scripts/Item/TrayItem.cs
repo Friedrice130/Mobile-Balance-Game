@@ -11,19 +11,18 @@ public class TrayItem : MonoBehaviour
     private bool isDestroyed = false;
 
 
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        if (transform.position.y < -5f && !isDestroyed)
+        if (isDestroyed) return;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             if (isImportant)
             {
                 TriggerGameOver($"Game Over: {itemName} (Important) fell off the tray!");
-                HapticFeedback.HeavyFeedback();
             }
             else
             {
                 isDestroyed = true;
-
                 Destroy(gameObject, 2f);
             }
         }
