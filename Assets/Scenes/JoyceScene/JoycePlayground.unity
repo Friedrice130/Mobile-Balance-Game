@@ -12969,7 +12969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: CandleStand
-  isImportant: 0
+  isImportant: 1
 --- !u!1 &262081713340636686
 GameObject:
   m_ObjectHideFlags: 0
