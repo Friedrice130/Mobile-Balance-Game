@@ -15,7 +15,7 @@ MonoBehaviour:
   stateName: FogDark
   fogEnabled: 1
   fogColor: {r: 0.4490565, g: 0.4397365, b: 0.4397365, a: 0.39215687}
-  fogDensity: 0.015
+  fogDensity: 0.044
   lightColor: {r: 0.16470589, g: 0.28235295, b: 0.41960785, a: 1}
   lightIntensity: 0.25
   ambientColor: {r: 0.13181199, g: 0.14935063, b: 0.19245279, a: 1}

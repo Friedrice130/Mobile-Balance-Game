@@ -1,0 +1,119 @@
+fileFormatVersion: 2
+guid: f3a2c9daf9076f948addca6530a07693
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Environment\House\diorama\scene.bin
+    assetPath: Assets\Environment\House\diorama\scene.bin
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Walls_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Walls_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Walls_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\Walls_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Walls_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\Walls_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Door_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Door_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Door_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\Door_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Door_MAT_emissive.png
+    assetPath: Assets\Environment\House\diorama\textures\Door_MAT_emissive.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Door_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\Door_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\VanGogh_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\VanGogh_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\VanGogh_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\VanGogh_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\VanGogh_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\VanGogh_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Table_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Table_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Table_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\Table_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Table_MAT_emissive.png
+    assetPath: Assets\Environment\House\diorama\textures\Table_MAT_emissive.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Table_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\Table_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\FlowerVase_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\FlowerVase_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\FlowerVase_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\FlowerVase_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\FlowerVase_MAT_emissive.png
+    assetPath: Assets\Environment\House\diorama\textures\FlowerVase_MAT_emissive.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\FlowerVase_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\FlowerVase_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Clock_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Clock_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Clock_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\Clock_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Clock_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\Clock_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Window_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Window_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Window_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\Window_MAT_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Window_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\Window_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Mother_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Mother_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Mother_MAT_normal.png
+    assetPath: Assets\Environment\House\diorama\textures\Mother_MAT_normal.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Cowboy_MAT_baseColor.png
+    assetPath: Assets\Environment\House\diorama\textures\Cowboy_MAT_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\House\diorama\textures\Cowboy_MAT_metallicRoughness.png
+    assetPath: Assets\Environment\House\diorama\textures\Cowboy_MAT_metallicRoughness.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
