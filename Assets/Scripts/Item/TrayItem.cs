@@ -14,8 +14,13 @@ public class TrayItem : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (isDestroyed) return;
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
+            Debug.Log($"{itemName} hit the ground.");
+
+            HapticManager.Instance?.Default();
+
             if (isImportant)
             {
                 TriggerGameOver($"Game Over: {itemName} (Important) fell off the tray!");
