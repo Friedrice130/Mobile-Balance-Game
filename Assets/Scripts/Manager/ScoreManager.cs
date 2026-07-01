@@ -53,7 +53,7 @@ public class ScoreManager : MonoBehaviour
 
             float totalScore = itemScore + timeScore;
 
-            return Mathf.RoundToInt(totalScore * 100f);
+            return Mathf.RoundToInt(totalScore * 10f);
         }
     }
 
