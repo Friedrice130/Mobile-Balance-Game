@@ -30,8 +30,8 @@ public class ScoreManager : MonoBehaviour
     {
         get
         {
-            float itemScore = ((float)RemainingItems / TotalItems) * 60f;
-            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 40f;
+            float itemScore = ((float)RemainingItems / TotalItems) * 80f;
+            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 20f;
 
             return Mathf.RoundToInt(itemScore + timeScore);
         }
@@ -39,10 +39,10 @@ public class ScoreManager : MonoBehaviour
 
     public string GetRank(int score)
     {
-        if (score >= 80)
+        if (score >= 85)
             return "S+";
 
-        if (score >= 60)
+        if (score >= 70)
             return "A";
 
         return "B";
