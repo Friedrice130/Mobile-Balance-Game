@@ -1,10 +1,11 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using TMPro;
-using System.Collections;
-using UnityEngine.Audio;
 using System;
+using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -120,13 +121,15 @@ public class UIManager : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
-    public void ShowGameWin()
+    public void ShowGameWin(int score, string rank)
     {
         pauseButton.SetActive(false);
         
         if (gameWinPanel != null)
         {
             gameWinPanel.SetActive(true);
+            Debug.Log($"Score: {score}");
+            Debug.Log($"Rank: {rank}");
         }
     }
 

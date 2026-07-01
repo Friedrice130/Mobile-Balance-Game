@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public SoundData TempBGM;
 
     private float currentTime;
+    public float CurrentTime => currentTime;
+    public float MaxTime => levelTimeInSeconds;
 
     void Awake()
     {
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartLevelRoutine()
     {
-        //currentState = GameState.Countdown;
+        currentState = GameState.Countdown;
 
         if (uiManager != null)
         {
@@ -98,7 +100,10 @@ public class GameManager : MonoBehaviour
 
         if (uiManager != null)
         {
-            uiManager.ShowGameWin();
+            int score = ScoreManager.Instance.FinalScore;
+            string rank = ScoreManager.Instance.GetRank(score);
+
+            uiManager.ShowGameWin(score, rank);
         }
     }
 }
