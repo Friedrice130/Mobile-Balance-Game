@@ -32,6 +32,12 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject gameWinPanel;
 
+    [Header("Game Win UI")]
+    public TextMeshProUGUI scoreText;
+    public GameObject rankSPlus;
+    public GameObject rankA;
+    public GameObject rankB;
+
     [Header("Game References")]
     public TrayBalancer trayBalancer;
     public int mainMenuBuildIndex = 0;
@@ -74,6 +80,9 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f; 
         pauseMenuPanel.SetActive(false);
         gameWinPanel.SetActive(false);
+        rankSPlus.SetActive(false);
+        rankA.SetActive(false);
+        rankB.SetActive(false);
     }
 
     public IEnumerator PlayCountdownUI()
@@ -121,13 +130,34 @@ public class UIManager : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
-    public void ShowGameWin(int score, string rank)
+    public void ShowGameWin(int score, Rank rank)
     {
         pauseButton.SetActive(false);
         
         if (gameWinPanel != null)
         {
             gameWinPanel.SetActive(true);
+            scoreText.text = $"Score: {score}";
+                
+            rankSPlus.SetActive(false);
+            rankA.SetActive(false);
+            rankB.SetActive(false);
+
+            switch (rank)
+            {
+                case Rank.SPlus:
+                    rankSPlus.SetActive(true);
+                    break;
+
+                case Rank.A:
+                    rankA.SetActive(true);
+                    break;
+
+                case Rank.B:
+                    rankB.SetActive(true);
+                    break;
+            }
+
             Debug.Log($"Score: {score}");
             Debug.Log($"Rank: {rank}");
         }

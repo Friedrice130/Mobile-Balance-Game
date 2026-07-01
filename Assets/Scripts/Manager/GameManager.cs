@@ -100,10 +100,11 @@ public class GameManager : MonoBehaviour
 
         if (uiManager != null)
         {
-            int score = ScoreManager.Instance.FinalScore;
-            string rank = ScoreManager.Instance.GetRank(score);
+            int actualScore = ScoreManager.Instance.FinalScore;
+            int displayScore = ScoreManager.Instance.DisplayScore;
+            Rank rank = ScoreManager.Instance.FinalRank;
 
-            uiManager.ShowGameWin(score, rank);
+            uiManager.ShowGameWin(displayScore, rank);
         }
     }
 }

@@ -1,5 +1,12 @@
 using UnityEngine;
 
+public enum Rank
+{
+    B,
+    A,
+    SPlus
+}
+
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
@@ -26,25 +33,41 @@ public class ScoreManager : MonoBehaviour
 
     public int TotalItems => totalItems;
 
-    public int FinalScore
+    public int FinalScore //for Rank
     {
         get
         {
-            float itemScore = ((float)RemainingItems / TotalItems) * 80f;
-            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 20f;
+            float itemScore = ((float)RemainingItems / TotalItems) * 50f;
+            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 50f;
 
             return Mathf.RoundToInt(itemScore + timeScore);
         }
     }
 
-    public string GetRank(int score)
+    public int DisplayScore //for Score 4 digits
     {
-        if (score >= 85)
-            return "S+";
+        get
+        {
+            float itemScore = ((float)RemainingItems / TotalItems) * 50f;
+            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 50f;
 
-        if (score >= 70)
-            return "A";
+            float totalScore = itemScore + timeScore;
 
-        return "B";
+            return Mathf.RoundToInt(totalScore * 100f);
+        }
+    }
+
+    public Rank FinalRank
+    {
+        get
+        {
+            if (FinalScore >= 90)
+                return Rank.SPlus;
+
+            if (FinalScore >= 70)
+                return Rank.A;
+
+            return Rank.B;
+        }
     }
 }
