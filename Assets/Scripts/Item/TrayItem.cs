@@ -13,7 +13,7 @@ public class TrayItem : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y < 1f && !isDestroyed)
+        if (transform.position.y < -5f && !isDestroyed)
         {
             if (isImportant)
             {
