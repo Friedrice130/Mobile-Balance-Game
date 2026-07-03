@@ -1,0 +1,11 @@
+Model Information:
+* title:	Elegant Dining Table Set
+* source:	https://sketchfab.com/3d-models/elegant-dining-table-set-33835f778b504094b314bec1c9b136ad
+* author:	Tom Au (https://sketchfab.com/trietau)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Elegant Dining Table Set" (https://sketchfab.com/3d-models/elegant-dining-table-set-33835f778b504094b314bec1c9b136ad) by Tom Au (https://sketchfab.com/trietau) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
