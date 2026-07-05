@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 14a3608c292fc0746ab5a486780c04ae
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\scene.bin
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\scene.bin
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\material_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\material_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\material_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\material_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\material_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\material_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\AloeVera_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\AloeVera_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\AloeVera_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\AloeVera_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\AloeVera_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\AloeVera_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf1_baseColor.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf1_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf1_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf1_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Sapling_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Sapling_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Sapling_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Sapling_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Sapling_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Sapling_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf2_baseColor.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf2_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf2_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Leaf2_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Pot2_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Pot2_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Pot2_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Pot2_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Pot2_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Pot2_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt2_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt2_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt2_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt2_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt2_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Dirt2_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Wood_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Wood_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Wood_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Wood_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Wood_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Wood_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Ceramic_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Ceramic_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Ceramic_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Ceramic_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Ceramic_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Ceramic_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Soil_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Soil_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Soil_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Soil_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Soil_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Soil_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Monstera_baseColor.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Monstera_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\Monstera_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\Monstera_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyMetal_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyMetal_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyMetal_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyMetal_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyMetal_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyMetal_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyPorcelain_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyPorcelain_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyPorcelain_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyPorcelain_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyPorcelain_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\LilyPorcelain_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\lilysoil_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\lilysoil_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\lilysoil_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\lilysoil_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\lilysoil_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\lilysoil_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\TCom_Plant_PeaceLily02_2K_albedo_baseColor.jpeg
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\TCom_Plant_PeaceLily02_2K_albedo_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\TCom_Plant_PeaceLily02_2K_albedo_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\TCom_Plant_PeaceLily02_2K_albedo_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Plant\indoor_plants\textures\TCom_Plant_PeaceLily02_2K_albedo_normal.png
+    assetPath: Assets\Environment\restaurant\Plant\indoor_plants\textures\TCom_Plant_PeaceLily02_2K_albedo_normal.png
+  reportItems: []

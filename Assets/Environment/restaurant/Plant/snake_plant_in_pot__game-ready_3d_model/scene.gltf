@@ -1,0 +1,308 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2060,
+      "max": [
+        9.62313175201416,
+        7.265915393829346,
+        50.76408767700195
+      ],
+      "min": [
+        -11.291486740112305,
+        -7.323421001434326,
+        0.9191184043884277
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 24720,
+      "componentType": 5126,
+      "count": 2060,
+      "max": [
+        1.0,
+        1.0,
+        0.9999995827674866
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 2060,
+      "max": [
+        1.0,
+        0.9999426603317261,
+        0.9841108918190002,
+        1.0
+      ],
+      "min": [
+        -0.9997482895851135,
+        -1.0,
+        -0.9966925382614136,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2060,
+      "max": [
+        0.9966050386428833,
+        0.9899534583091736
+      ],
+      "min": [
+        0.011683712713420391,
+        0.003985697869211435
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 8259,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "CHEN (https://sketchfab.com/aa6112532527)",
+      "license": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+      "source": "https://sketchfab.com/3d-models/snake-plant-in-pot-game-ready-3d-model-aee11e6a64644d3691a1a4fbe47323ef",
+      "title": "Snake Plant in Pot – Game-Ready 3D Model"
+    },
+    "generator": "Sketchfab-16.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 33036,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 16480,
+      "byteOffset": 33036,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 49440,
+      "byteOffset": 49516,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 32960,
+      "byteOffset": 98956,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 131916,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/14_-_Default_baseColor.png"
+    },
+    {
+      "uri": "textures/14_-_Default_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/14_-_Default_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "14_-_Default",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Plant01_14 - Default_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.02539999969303608,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.02539999969303608,
+        0.0,
+        0.0,
+        -0.02539999969303608,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "f336613ebb0f4740b3e53ecfd777e131.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        57.38974380493164,
+        1.0386548042297363,
+        25.846176147460938,
+        1.0
+      ],
+      "name": "Plant01"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        -0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0988311767578125,
+        1.0
+      ],
+      "name": "Object_4"
+    },
+    {
+      "mesh": 0,
+      "name": "Plant01_14 - Default_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
