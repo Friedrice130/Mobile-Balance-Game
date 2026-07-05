@@ -1,0 +1,11 @@
+Model Information:
+* title:	Water Shader (blender)
+* source:	https://sketchfab.com/3d-models/water-shader-blender-d603f6a75f4243b993c8e0c6d6877650
+* author:	elite (https://sketchfab.com/semithacatbat211)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Water Shader (blender)" (https://sketchfab.com/3d-models/water-shader-blender-d603f6a75f4243b993c8e0c6d6877650) by elite (https://sketchfab.com/semithacatbat211) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

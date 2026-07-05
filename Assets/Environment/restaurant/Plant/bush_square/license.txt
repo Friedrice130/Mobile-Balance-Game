@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bush Square
+* source:	https://sketchfab.com/3d-models/bush-square-c90165bb23744f009f950295c6b384e6
+* author:	Juandaneitor master (https://sketchfab.com/juandavidchibuque)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bush Square" (https://sketchfab.com/3d-models/bush-square-c90165bb23744f009f950295c6b384e6) by Juandaneitor master (https://sketchfab.com/juandavidchibuque) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

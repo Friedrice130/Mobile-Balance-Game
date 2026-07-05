@@ -20,6 +20,7 @@ public class TrayItem : MonoBehaviour
             Debug.Log($"{itemName} hit the ground.");
 
             HapticManager.Instance?.Default();
+            ScoreManager.Instance?.ItemDropped();
 
             if (isImportant)
             {
@@ -43,6 +44,7 @@ public class TrayItem : MonoBehaviour
             GameManager.Instance.TriggerGameOver(reason);
         }
 
+        
         Destroy(gameObject, 2f);
     }
 }

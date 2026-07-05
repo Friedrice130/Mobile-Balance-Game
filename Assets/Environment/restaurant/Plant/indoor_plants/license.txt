@@ -1,0 +1,11 @@
+Model Information:
+* title:	Indoor Plants
+* source:	https://sketchfab.com/3d-models/indoor-plants-efe25daceaf940f5aa8519b9d77683d2
+* author:	Visthétique (https://sketchfab.com/visthetique)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Indoor Plants" (https://sketchfab.com/3d-models/indoor-plants-efe25daceaf940f5aa8519b9d77683d2) by Visthétique (https://sketchfab.com/visthetique) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

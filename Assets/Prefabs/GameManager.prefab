@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7184743294963013847}
   - component: {fileID: 5065059080669269855}
+  - component: {fileID: 2025437089111715420}
+  - component: {fileID: 2281331915441242982}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,3 +51,27 @@ MonoBehaviour:
   isInfiniteTime: 0
   levelTimeInSeconds: 30
   TempBGM: {fileID: 11400000, guid: 39b7b58b24e727c49a69eb2d8b6c6c31, type: 2}
+--- !u!114 &2025437089111715420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3019279153407027729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f825eb7701c5f6b4985379e6505ec428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HapticManager
+--- !u!114 &2281331915441242982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3019279153407027729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197d501c4c6896f40a24611ec334e651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
