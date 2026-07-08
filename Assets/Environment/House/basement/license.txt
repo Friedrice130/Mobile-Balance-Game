@@ -1,0 +1,11 @@
+Model Information:
+* title:	Basement
+* source:	https://sketchfab.com/3d-models/basement-d06feb36190543369e25a4018c20ec07
+* author:	kozok-3d (https://sketchfab.com/kozok-3d)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Basement" (https://sketchfab.com/3d-models/basement-d06feb36190543369e25a4018c20ec07) by kozok-3d (https://sketchfab.com/kozok-3d) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
