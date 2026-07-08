@@ -7,8 +7,8 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Night Moon BurstSettings
-  serializedVersion: 8
-  m_EnableBakedLightmaps: 0
+  serializedVersion: 10
+  m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
@@ -22,8 +22,14 @@ LightingSettings:
   m_BakeResolution: 50
   m_Padding: 2
   m_LightmapCompression: 0
-  m_AO: 0
-  m_AOMaxDistance: 1
+  m_LightmapPackingMode: 1
+  m_LightmapPackingMethod: 0
+  m_XAtlasPackingAttempts: 16384
+  m_XAtlasBruteForce: 0
+  m_XAtlasBlockAlign: 0
+  m_XAtlasRepackUnderutilizedLightmaps: 1
+  m_AO: 1
+  m_AOMaxDistance: 10
   m_CompAOExponent: 0
   m_CompAOExponentDirect: 0
   m_ExtractAO: 0

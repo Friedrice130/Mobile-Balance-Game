@@ -1,0 +1,11 @@
+Model Information:
+* title:	TreeA
+* source:	https://sketchfab.com/3d-models/treea-d44222f5e9994ad6b4a975951c0ada44
+* author:	BotondBencsik (https://sketchfab.com/bosch00)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "TreeA" (https://sketchfab.com/3d-models/treea-d44222f5e9994ad6b4a975951c0ada44) by BotondBencsik (https://sketchfab.com/bosch00) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

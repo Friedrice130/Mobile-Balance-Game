@@ -1,10 +1,11 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using TMPro;
-using System.Collections;
-using UnityEngine.Audio;
 using System;
+using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject gameOverPanel;
     public GameObject gameWinPanel;
+
+    [Header("Game Win UI")]
+    public TextMeshProUGUI scoreText;
+    public GameObject rankSPlus;
+    public GameObject rankA;
+    public GameObject rankB;
 
     [Header("Game References")]
     public TrayBalancer trayBalancer;
@@ -63,16 +70,19 @@ public class UIManager : MonoBehaviour
 
             if (angleSliderLR != null) angleSliderLR.value = trayBalancer.maxTiltAngleLR;
             if (angleSliderFB != null) angleSliderFB.value = trayBalancer.maxTiltAngleFB;
-            
+
             if (invertToggleLR != null) invertToggleLR.isOn = trayBalancer.invertTiltLR;
             if (invertToggleFB != null) invertToggleFB.isOn = trayBalancer.invertTiltFB;
 
             StartCoroutine(InitializeAudioMixer(savedMaster, savedMusic, savedSFX));
         }
 
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
         pauseMenuPanel.SetActive(false);
         gameWinPanel.SetActive(false);
+        rankSPlus.SetActive(false);
+        rankA.SetActive(false);
+        rankB.SetActive(false);
     }
 
     public IEnumerator PlayCountdownUI()
@@ -100,7 +110,7 @@ public class UIManager : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = 0f; 
+        Time.timeScale = 0f;
         pauseMenuPanel.SetActive(true);
         pauseButton.SetActive(false);
 
@@ -108,7 +118,7 @@ public class UIManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
         pauseMenuPanel.SetActive(false);
         pauseButton.SetActive(true);
     }
@@ -116,17 +126,139 @@ public class UIManager : MonoBehaviour
     public void ShowGameOver(string reason)
     {
         pauseButton.SetActive(false);
-        
+
         gameOverPanel.SetActive(true);
     }
 
-    public void ShowGameWin()
+    public void ShowGameWin(int score, Rank rank)
     {
         pauseButton.SetActive(false);
-        
+
         if (gameWinPanel != null)
         {
             gameWinPanel.SetActive(true);
+            rankSPlus.SetActive(false);
+            rankA.SetActive(false);
+            rankB.SetActive(false);
+            scoreText.text = "";
+
+            StartCoroutine(CinematicWinRoutine(score, rank));
+            Debug.Log($"Score: {score} | Rank: {rank}");
+        }
+    }
+
+    private IEnumerator CinematicWinRoutine(int finalScore, Rank rank)
+    {
+        yield return new WaitForSecondsRealtime(0.4f);
+
+        float rollDuration = 2.2f;
+        float elapsed = 0f;
+        scoreText.text = "Score: 0";
+
+        Transform scoreTransform = scoreText.transform;
+        Vector3 nativeLocalPos = scoreTransform.localPosition; 
+
+        // --- 1. SCORE ROLL ---
+        while (elapsed < rollDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float progress = elapsed / rollDuration;
+
+            float customEase = progress < 0.5f
+                ? 4f * progress * progress * progress
+                : 1f - Mathf.Pow(-2f * progress + 2f, 3f) / 2f;
+
+            scoreText.text = $"Score: {Mathf.RoundToInt(Mathf.Lerp(0, finalScore, customEase))}";
+
+            if (progress > 0.2f && progress < 0.8f)
+            {
+                float jitter = UnityEngine.Random.Range(-3f, 3f);
+                scoreTransform.localPosition = nativeLocalPos + new Vector3(jitter, jitter, 0);
+            }
+            else
+            {
+                scoreTransform.localPosition = nativeLocalPos;
+            }
+            yield return null;
+        }
+        scoreTransform.localPosition = nativeLocalPos;
+        scoreText.text = $"Score: {finalScore}";
+
+        // --- 2. IMPACT POP ---
+        float bounceElapsed = 0f;
+        float popDuration = 0.08f;
+        while (bounceElapsed < popDuration)
+        {
+            bounceElapsed += Time.unscaledDeltaTime;
+            scoreTransform.localScale = Vector3.Lerp(Vector3.one, new Vector3(1.5f, 1.5f, 1f), bounceElapsed / popDuration);
+            yield return null;
+        }
+
+        bounceElapsed = 0f;
+        float settleDuration = 0.27f;
+        while (bounceElapsed < settleDuration)
+        {
+            bounceElapsed += Time.unscaledDeltaTime;
+            float t = bounceElapsed / settleDuration;
+            float dynamicScale = 1f + (0.50f * Mathf.Cos(t * Mathf.PI * 2.5f) * Mathf.Exp(-t * 4f));
+            scoreTransform.localScale = new Vector3(dynamicScale, dynamicScale, 1f);
+            yield return null;
+        }
+        scoreTransform.localScale = Vector3.one;
+
+        yield return new WaitForSecondsRealtime(0.4f);
+
+        // --- 3. RANK SLAM ---
+        GameObject targetRankObj = rank switch
+        {
+            Rank.SPlus => rankSPlus,
+            Rank.A => rankA,
+            Rank.B => rankB,
+            _ => null
+        };
+
+        if (targetRankObj != null)
+        {
+            targetRankObj.SetActive(true);
+            Transform rankTransform = targetRankObj.transform;
+            Vector3 originalRankPos = rankTransform.localPosition;
+
+            float slamDuration = 0.15f;
+            float slamElapsed = 0f;
+
+            while (slamElapsed < slamDuration)
+            {
+                slamElapsed += Time.unscaledDeltaTime;
+                float t = slamElapsed / slamDuration;
+                rankTransform.localScale = Vector3.Lerp(new Vector3(10f, 10f, 10f), Vector3.one, t * t * t);
+                yield return null;
+            }
+
+            // High-Impact Impact Frame Freeze
+            rankTransform.localScale = Vector3.one;
+            yield return new WaitForSecondsRealtime(0.04f);
+
+            // Aftershock structural echo tremor (Slammed look feeling)
+            float earthquakeElapsed = 0f;
+            float earthquakeDuration = 0.25f;
+
+            while (earthquakeElapsed < earthquakeDuration)
+            {
+                earthquakeElapsed += Time.unscaledDeltaTime;
+                float t = earthquakeElapsed / earthquakeDuration;
+
+                // Rapidly dampening structural camera-shake style vibration
+                float shakeIntensity = Mathf.Sin(t * Mathf.PI * 8f) * Mathf.Exp(-t * 5f) * 15f;
+                rankTransform.localPosition = originalRankPos + new Vector3(UnityEngine.Random.Range(-shakeIntensity, shakeIntensity), UnityEngine.Random.Range(-shakeIntensity, shakeIntensity), 0);
+
+                // Mild structural compression squish matching impact speed
+                float dynamicSquish = Mathf.Sin(t * Mathf.PI * 2f) * Mathf.Exp(-t * 4f) * 0.25f;
+                rankTransform.localScale = new Vector3(1f + dynamicSquish, 1f - dynamicSquish, 1f);
+
+                yield return null;
+            }
+            rankTransform.localPosition = originalRankPos;
+            rankTransform.localScale = Vector3.one;
         }
     }
 
@@ -218,13 +350,13 @@ public class UIManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
-        
+
         SceneManager.LoadScene(mainMenuBuildIndex);
     }
 
     public void PlayNextLevel()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
@@ -240,7 +372,7 @@ public class UIManager : MonoBehaviour
     private IEnumerator InitializeAudioMixer(float master, float music, float sfx)
     {
         yield return null;
-        
+
         SetMixerVolume("MasterVol", master);
         SetMixerVolume("MusicVol", music);
         SetMixerVolume("SFXVol", sfx);
@@ -249,14 +381,14 @@ public class UIManager : MonoBehaviour
     private void SetMixerVolume(string parameterName, float sliderValue)
     {
         if (mainMixer == null) return;
-        
+
         // Convert linear slider (0 to 1) to Logarithmic Decibels (-80dB to 0dB)
-        float clampedValue = Mathf.Clamp(sliderValue, 0.0001f, 1f); 
+        float clampedValue = Mathf.Clamp(sliderValue, 0.0001f, 1f);
         float decibelValue = Mathf.Log10(clampedValue) * 20f;
-        
+
         mainMixer.SetFloat(parameterName, decibelValue);
     }
-    
+
     public void OnMasterVolumeChanged(float value)
     {
         SetMixerVolume("MasterVol", value);
