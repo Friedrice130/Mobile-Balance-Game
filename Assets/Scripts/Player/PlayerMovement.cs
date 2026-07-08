@@ -18,13 +18,16 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask obstacleLayer;
     public float playerRadius = 0.4f;
     public float trayReach = 0.6f;
+    public float stepHeight = 0.3f;
 
     [Header("Terrain Interaction")]
     public LayerMask groundLayer;
     [Tooltip("How high from the player base the laser starts")]
     public float groundCheckHeight = 1f; 
     [Tooltip("The normal height of the player center from the floor")]
-    public float groundOffset = 1f; 
+    public float groundOffset = 1f;
+    [Tooltip("Looks ahead to anticipate stairs before hitting them")]
+    public float lookAheadDistance = 0.3f;
     
     [Tooltip("Higher = sharper, more violent bumps. Lower = smooth, wave-like bumps")]
     public float bumpHarshness = 20f; 
@@ -39,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     private float footstepTimer = 0f;
     
     private Rigidbody rb;
-    private float targetXPosition;
     private float currentForwardSpeed;
     private bool isHolding;
     private float inputDeltaX;
@@ -52,13 +54,13 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion turnTargetRotation;
     private float turnElapsed = 0f;
     private float turnDuration = 1f;
+    private Vector3 currentHeading;
 
     public void StartAutoTurn(float angle, float duration)
     {
         if (isTurning) return;
         
-        Vector3 flatForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
-        turnStartRotation = Quaternion.LookRotation(flatForward, Vector3.up);
+        turnStartRotation = Quaternion.LookRotation(currentHeading, Vector3.up);
         turnTargetRotation = turnStartRotation * Quaternion.Euler(0, angle, 0);
         turnDuration = duration;
         turnElapsed = 0f;
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         pathCenter = transform.position;
         targetStrafeOffset = 0f;
         currentStrafeOffset = 0f;
+        currentHeading = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
     }
 
     void Update()
@@ -139,9 +142,7 @@ public class PlayerMovement : MonoBehaviour
         float targetSpeed = isHolding ? topSpeed : 0f;
         currentForwardSpeed = Mathf.Lerp(currentForwardSpeed, targetSpeed, acceleration * Time.fixedDeltaTime);
 
-        // Auto Turnm
-        Vector3 referenceForward = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
-        
+        // Auto Turn        
         if (isTurning)
         {
             turnElapsed += Time.fixedDeltaTime;
@@ -150,27 +151,37 @@ public class PlayerMovement : MonoBehaviour
             
             float smoothT = t * t * (3f - 2f * t);
             Quaternion currentYaw = Quaternion.Slerp(turnStartRotation, turnTargetRotation, smoothT);
-            referenceForward = currentYaw * Vector3.forward;
+            currentHeading = currentYaw * Vector3.forward;
 
             if (t >= 1f) isTurning = false;
         }
+        
+        Vector3 referenceForward = currentHeading;
 
         // Terrain Detection
         float targetY = rb.position.y;
         Quaternion targetRotation = rb.rotation;
-        Vector3 rayStart = rb.position + (Vector3.up * groundCheckHeight);
+
+        Vector3 rayStart = rb.position + (referenceForward * lookAheadDistance) + (Vector3.up * groundCheckHeight);
 
         // Debug
         Debug.DrawRay(rayStart, Vector3.down * (groundCheckHeight * 2f), Color.red);
 
-        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, groundCheckHeight * 2f, groundLayer))
+        float rayLength = groundCheckHeight + 10f; 
+
+        if (Physics.Raycast(rayStart, Vector3.down, out RaycastHit hit, rayLength, groundLayer))
         {
             targetY = hit.point.y + groundOffset;
 
             if (alignToSlopes)
             {
-                Vector3 projectedForward = Vector3.ProjectOnPlane(referenceForward, hit.normal).normalized;
-                Quaternion slopeRotation = Quaternion.LookRotation(projectedForward, hit.normal);
+                // Vector3 projectedForward = Vector3.ProjectOnPlane(referenceForward, hit.normal).normalized;
+                // Quaternion slopeRotation = Quaternion.LookRotation(projectedForward, hit.normal);
+                // targetRotation = Quaternion.Slerp(rb.rotation, slopeRotation, slopeSmoothness * Time.fixedDeltaTime);
+
+                Quaternion flatYaw = Quaternion.LookRotation(referenceForward, Vector3.up);
+                Quaternion groundTilt = Quaternion.FromToRotation(Vector3.up, hit.normal);
+                Quaternion slopeRotation = groundTilt * flatYaw;
                 targetRotation = Quaternion.Slerp(rb.rotation, slopeRotation, slopeSmoothness * Time.fixedDeltaTime);
             }
         }
@@ -184,14 +195,23 @@ public class PlayerMovement : MonoBehaviour
         Vector3 currentForward = targetRotation * Vector3.forward;
         Vector3 currentRight = targetRotation * Vector3.right;
 
-        Vector3 castStart = rb.position + (Vector3.up * groundOffset);
+        LayerMask safeObstacleLayer = obstacleLayer & ~groundLayer;
+        safeObstacleLayer &= ~(1 << gameObject.layer);
+
+        Vector3 flatRadarForward = Vector3.ProjectOnPlane(referenceForward, Vector3.up).normalized;
+        Vector3 flatRadarRight = Vector3.ProjectOnPlane(currentRight, Vector3.up).normalized;
+
+        Vector3 feetPosition = rb.position - (Vector3.up * groundOffset);
+        Vector3 castStart = feetPosition + (Vector3.up * (stepHeight + playerRadius));
+
         Vector3 forwardMove = currentForward * currentForwardSpeed * Time.fixedDeltaTime;
+
         if (forwardMove.magnitude > 0.001f)
         {
-            Vector3 p1 = castStart + forwardMove + (currentForward * 0.05f);
-            Vector3 p2 = castStart + (currentForward * trayReach) + forwardMove + (currentForward * 0.05f);
+            Vector3 p1 = castStart + (flatRadarForward * 0.05f);
+            Vector3 p2 = castStart + (flatRadarForward * trayReach) + (flatRadarForward * 0.05f);
 
-            if (Physics.CheckCapsule(p1, p2, playerRadius, obstacleLayer, QueryTriggerInteraction.Ignore))
+            if (Physics.CheckCapsule(p1, p2, playerRadius, safeObstacleLayer, QueryTriggerInteraction.Ignore))
             {
                 forwardMove = Vector3.zero; 
 
@@ -203,25 +223,26 @@ public class PlayerMovement : MonoBehaviour
 
         float nextStrafeOffset = Mathf.Lerp(currentStrafeOffset, targetStrafeOffset, strafeSmoothness * Time.fixedDeltaTime);
         float strafeDelta = nextStrafeOffset - currentStrafeOffset;
-        Vector3 strafeMove = transform.right * strafeDelta;
+        Vector3 strafeMove = currentRight * strafeDelta;
 
         if (strafeMove.magnitude > 0.001f)
         {
-            Vector3 p1 = castStart + strafeMove + (strafeMove.normalized * 0.05f);
-            Vector3 p2 = castStart + (transform.forward * trayReach) + strafeMove + (strafeMove.normalized * 0.05f);
+            Vector3 p1 = castStart + (flatRadarRight * 0.05f);
+            Vector3 p2 = castStart + (flatRadarForward * trayReach) + (flatRadarRight * 0.05f);
             
-            if (Physics.CheckCapsule(p1, p2, playerRadius, obstacleLayer, QueryTriggerInteraction.Ignore))
+            if (Physics.CheckCapsule(p1, p2, playerRadius, safeObstacleLayer, QueryTriggerInteraction.Ignore))
             {
-                // Cancel strafe momentum
                 nextStrafeOffset = currentStrafeOffset;
                 targetStrafeOffset = currentStrafeOffset; 
             }
         }
 
         pathCenter += forwardMove;
+        pathCenter.y = rb.position.y;
+
         currentStrafeOffset = nextStrafeOffset;
 
-        Vector3 newPosition = pathCenter + (transform.right * currentStrafeOffset);
+        Vector3 newPosition = pathCenter + (currentRight * currentStrafeOffset);
         newPosition.y = Mathf.Lerp(rb.position.y, targetY, bumpHarshness * Time.fixedDeltaTime);
 
         rb.MovePosition(newPosition);
