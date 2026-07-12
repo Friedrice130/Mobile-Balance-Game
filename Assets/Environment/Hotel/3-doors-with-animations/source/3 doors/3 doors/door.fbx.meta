@@ -3,7 +3,12 @@ guid: 4283950f19b4fe34c8ba86b7fdc223f1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door3
+    second: {fileID: 2100000, guid: b447edcbfee25394a84143d521fe9dcc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -20,8 +25,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importAnimatedCustomProperties: 1
+    importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
