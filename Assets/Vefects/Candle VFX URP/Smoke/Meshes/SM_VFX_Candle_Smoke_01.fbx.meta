@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 2865f9196507d8849ac7e75eaa83cb0c
+guid: 0c4db07160ca2ec408ec0feff53110a6
 ModelImporter:
-  serializedVersion: 24200
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -56,9 +56,6 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    generateMeshLods: 0
-    meshLodGenerationFlags: 0
-    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -108,3 +105,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299224
+  packageName: Candle VFX - URP
+  packageVersion: 1.0.01
+  assetPath: Assets/Vefects/Candle VFX URP/Smoke/Meshes/SM_VFX_Candle_Smoke_01.fbx
+  uploadId: 708942
