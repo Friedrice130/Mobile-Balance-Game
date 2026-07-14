@@ -33,6 +33,15 @@ namespace DynamicWeatherSystem
         private AudioClip _trackedFrom;
         private AudioClip _trackedTo;
 
+        private bool _isStopped = false;
+
+        public void StopWeatherAudio()
+        {
+            _isStopped = true;
+            if (_sourceA != null) _sourceA.Stop();
+            if (_sourceB != null) _sourceB.Stop();
+        }
+
         // --- Lifecycle ---
 
         private void Awake()
@@ -45,6 +54,8 @@ namespace DynamicWeatherSystem
 
         public override void Blend(WeatherStateData from, WeatherStateData to, float t)
         {
+            if (_isStopped) return;
+            
             bool newTransition = from.ambientClip != _trackedFrom
                               || to.ambientClip   != _trackedTo;
 

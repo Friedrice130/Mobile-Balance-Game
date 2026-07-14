@@ -27,6 +27,17 @@ public class LightningGenerator : MonoBehaviour
         StartCoroutine(LightningRoutine());
     }
 
+    public void StopStorm()
+    {
+        isStorming = false;
+        StopAllCoroutines();
+        
+        if (flashLight != null) 
+        {
+            flashLight.enabled = false;
+        }
+    }
+
     private IEnumerator LightningRoutine()
     {
         while (isStorming)
