@@ -6671,6 +6671,8 @@ MonoBehaviour:
   masterSlider: {fileID: 5375333890090494862}
   musicSlider: {fileID: 3411304685238879944}
   sfxSlider: {fileID: 6967120588845249294}
+  countdownBeepSound: {fileID: 11400000, guid: 3d0ad3bd72315d8409f74e5cf871b35e, type: 2}
+  countdownStartSound: {fileID: 11400000, guid: 381cb07e87438b44385ffbd94ff1cfd9, type: 2}
   countdownText: {fileID: 4011309725837233815}
   timerText: {fileID: 1251592543623871872}
   gameOverPanel: {fileID: 5871777907964903050}

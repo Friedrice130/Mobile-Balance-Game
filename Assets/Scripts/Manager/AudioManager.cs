@@ -140,4 +140,26 @@ public class AudioManager : MonoBehaviour
         musicSource.volume = data.maxVolume; 
         musicSource.Play();
     }
+
+    public void StopAllGameplayAudio()
+    {
+        if (musicSource != null && musicSource.isPlaying) musicSource.Stop();
+
+        foreach (AudioSource source in audioPool)
+        {
+            if (source != null && source.isPlaying) source.Stop();
+        }
+
+        DynamicWeatherSystem.AudioModule weatherAudio = FindObjectOfType<DynamicWeatherSystem.AudioModule>();
+        if (weatherAudio != null)
+        {
+            weatherAudio.StopWeatherAudio();
+        }
+        
+        LightningGenerator lightning = FindObjectOfType<LightningGenerator>();
+        if (lightning != null)
+        {
+            lightning.StopStorm();
+        }
+    }
 }

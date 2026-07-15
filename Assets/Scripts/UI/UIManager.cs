@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -25,6 +24,8 @@ public class UIManager : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider sfxSlider;
+    public SoundData countdownBeepSound;
+    public SoundData countdownStartSound;
 
     [Header("Screens & Text")]
     public TextMeshProUGUI countdownText;
@@ -91,15 +92,23 @@ public class UIManager : MonoBehaviour
         countdownText.gameObject.SetActive(true);
 
         countdownText.text = "3";
+        if (AudioManager.Instance != null && countdownBeepSound != null) 
+            AudioManager.Instance.Play2D(countdownBeepSound);
         yield return new WaitForSeconds(1f);
 
         countdownText.text = "2";
+        if (AudioManager.Instance != null && countdownBeepSound != null) 
+            AudioManager.Instance.Play2D(countdownBeepSound);
         yield return new WaitForSeconds(1f);
 
         countdownText.text = "1";
+        if (AudioManager.Instance != null && countdownBeepSound != null) 
+            AudioManager.Instance.Play2D(countdownBeepSound);
         yield return new WaitForSeconds(1f);
 
         countdownText.text = "START!";
+        if (AudioManager.Instance != null && countdownStartSound != null) 
+            AudioManager.Instance.Play2D(countdownStartSound);
         yield return new WaitForSeconds(1f);
 
         countdownText.gameObject.SetActive(false);
@@ -125,6 +134,11 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver(string reason)
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopAllGameplayAudio();
+        }
+
         pauseButton.SetActive(false);
 
         gameOverPanel.SetActive(true);
@@ -132,6 +146,11 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameWin(int score, Rank rank)
     {
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StopAllGameplayAudio();
+        }
+        
         pauseButton.SetActive(false);
 
         if (gameWinPanel != null)
@@ -406,7 +425,4 @@ public class UIManager : MonoBehaviour
         SetMixerVolume("SFXVol", value);
         PlayerPrefs.SetFloat("SavedSFXVol", value);
     }
-
-
-
 }
