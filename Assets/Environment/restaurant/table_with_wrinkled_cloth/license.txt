@@ -1,0 +1,11 @@
+Model Information:
+* title:	Table with wrinkled cloth
+* source:	https://sketchfab.com/3d-models/table-with-wrinkled-cloth-289475e218d649ac9372b1e4160b2a55
+* author:	tronk (https://sketchfab.com/tronk)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Table with wrinkled cloth" (https://sketchfab.com/3d-models/table-with-wrinkled-cloth-289475e218d649ac9372b1e4160b2a55) by tronk (https://sketchfab.com/tronk) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
