@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartLevelRoutine()
     {
-        currentState = GameState.Countdown;
+        //currentState = GameState.Countdown;
 
         if (uiManager != null)
         {

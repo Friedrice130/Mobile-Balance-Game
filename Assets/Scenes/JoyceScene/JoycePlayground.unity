@@ -428,11 +428,13 @@ MonoBehaviour:
     m_Bits: 0
   playerRadius: 0.4
   trayReach: 0.6
+  stepHeight: 0.3
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   groundCheckHeight: 1.4
   groundOffset: 1
+  lookAheadDistance: 0.3
   bumpHarshness: 5
   alignToSlopes: 1
   slopeSmoothness: 10
@@ -6773,7 +6775,7 @@ Transform:
   m_GameObject: {fileID: 916495804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 2.7, z: -37.1}
+  m_LocalPosition: {x: 0.3, y: 2.7, z: 8.6}
   m_LocalScale: {x: 15, y: 15, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7533,7 +7535,7 @@ Transform:
   m_GameObject: {fileID: 1608586382}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -89.02}
+  m_LocalPosition: {x: 0, y: 0, z: -43.32}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20714,6 +20716,8 @@ MonoBehaviour:
   masterSlider: {fileID: 2626301004421578729}
   musicSlider: {fileID: 4736688265458930351}
   sfxSlider: {fileID: 1034513083866064745}
+  countdownBeepSound: {fileID: 0}
+  countdownStartSound: {fileID: 0}
   countdownText: {fileID: 6431267370708490992}
   timerText: {fileID: 9202533687483214311}
   gameOverPanel: {fileID: 4582348357502053101}
@@ -30696,7 +30700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &8759392910107315861
 GameObject:
   m_ObjectHideFlags: 0
