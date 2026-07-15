@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2417514818476856784}
   - component: {fileID: 5778440290220672121}
   m_Layer: 7
-  m_Name: WineGlass
+  m_Name: WineGlass 1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
