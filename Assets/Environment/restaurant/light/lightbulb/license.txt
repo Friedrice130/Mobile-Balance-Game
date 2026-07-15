@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lightbulb
+* source:	https://sketchfab.com/3d-models/lightbulb-f9b4b76d4178475f9f9db7f160ca0d14
+* author:	Sandra Stargardter (https://sketchfab.com/Stargardter)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lightbulb" (https://sketchfab.com/3d-models/lightbulb-f9b4b76d4178475f9f9db7f160ca0d14) by Sandra Stargardter (https://sketchfab.com/Stargardter) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
