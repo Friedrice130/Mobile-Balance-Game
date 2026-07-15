@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Gramophone
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
   clips:
-  - {fileID: 8300000, guid: f223c78410740bd4d96deead34f87381, type: 3}
-  minVolume: 1
+  - {fileID: 8300000, guid: 0b66c0566b00dc64caa25085d811aaf7, type: 3}
+  minVolume: 0.8
   maxVolume: 1
   minPitch: 0.9
   maxPitch: 1.1
   spatialBlend: 1
-  minDistance: 1
-  maxDistance: 30
+  minDistance: 3
+  maxDistance: 15
