@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 16d358f9e61ee5a42a50f8abac2faf2a
+guid: 1e4594e4cfbbed246b4449e3b941d9af
 ModelImporter:
-  serializedVersion: 24200
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -56,9 +56,6 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    generateMeshLods: 0
-    meshLodGenerationFlags: 0
-    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -108,3 +105,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299224
+  packageName: Candle VFX - URP
+  packageVersion: 1.0.01
+  assetPath: Assets/Vefects/Candle VFX URP/Candles/Wick/Meshes/SM_Candle_Wick_03.fbx
+  uploadId: 708942

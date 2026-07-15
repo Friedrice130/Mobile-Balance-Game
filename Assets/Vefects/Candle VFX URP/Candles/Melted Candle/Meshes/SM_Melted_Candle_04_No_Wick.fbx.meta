@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: bf2175c23e3489d4ba7e326a7f92d8a5
+guid: 5c7a6aeaab6a30a42b01e20b45ccb2ae
 ModelImporter:
-  serializedVersion: 24200
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects: {}
   materials:
@@ -56,9 +56,6 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
-    generateMeshLods: 0
-    meshLodGenerationFlags: 0
-    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -108,3 +105,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 299224
+  packageName: Candle VFX - URP
+  packageVersion: 1.0.01
+  assetPath: Assets/Vefects/Candle VFX URP/Candles/Melted Candle/Meshes/SM_Melted_Candle_04_No_Wick.fbx
+  uploadId: 708942
