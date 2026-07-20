@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4285737015529257791}
   - component: {fileID: 3943326249071283702}
   m_Layer: 7
-  m_Name: WineBottle
+  m_Name: WineBottle 1
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
