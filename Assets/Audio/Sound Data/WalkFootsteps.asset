@@ -20,8 +20,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4e7c912412f85fd4f9b098a5501cdd89, type: 3}
   - {fileID: 8300000, guid: 72a223d543e21004394ca6890dc2346c, type: 3}
   - {fileID: 8300000, guid: 52a9a8f7e929df943ae8b220bf7a21ee, type: 3}
-  minVolume: 0.8
-  maxVolume: 1
+  minVolume: 0.6
+  maxVolume: 0.8
   minPitch: 0.85
   maxPitch: 1.15
   spatialBlend: 1
