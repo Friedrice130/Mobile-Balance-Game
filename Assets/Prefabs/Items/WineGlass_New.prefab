@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &395912080544870987
+--- !u!1 &4230531172058577709
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8153090321374909550}
-  - component: {fileID: 4200191553990771998}
-  - component: {fileID: 2417514818476856784}
-  - component: {fileID: 5778440290220672121}
-  m_Layer: 7
-  m_Name: WineGlass 1
-  m_TagString: Item
+  - component: {fileID: 2333279394849938375}
+  - component: {fileID: 5118390133145074346}
+  m_Layer: 0
+  m_Name: collider_bottom (2)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8153090321374909550
+--- !u!4 &2333279394849938375
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395912080544870987}
+  m_GameObject: {fileID: 4230531172058577709}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.06797726, y: -0, z: -0, w: 0.99768686}
-  m_LocalPosition: {x: 0.19685979, y: 3.286, z: -45.372448}
-  m_LocalScale: {x: 0.108076, y: 0.016345054, z: 0.108076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0}
+  m_LocalScale: {x: 0.39247087, y: 0.24447186, z: 0.39247087}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4855274998718818746}
-  - {fileID: 1678885384658574663}
-  - {fileID: 1998886757010640967}
-  - {fileID: 8355177387622274881}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -7.796, y: 0, z: 0}
---- !u!64 &4200191553990771998
+  m_Children: []
+  m_Father: {fileID: 5276532774995393158}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &5118390133145074346
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395912080544870987}
+  m_GameObject: {fileID: 4230531172058577709}
   m_Material: {fileID: 13400000, guid: 600fdfe5ff609ac429eaa4392c7c4f6f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -60,48 +54,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &2417514818476856784
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395912080544870987}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 1
-  m_AngularDamping: 1
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 1
---- !u!114 &5778440290220672121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395912080544870987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703e9b5329d1bbf4bbd32737a46773fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrayItem
-  itemName: WineGlass
-  isImportant: 0
---- !u!1 &559689679807173441
+--- !u!1 &7163543132190179657
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,46 +62,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1678885384658574663}
-  - component: {fileID: 2278208863832890253}
-  - component: {fileID: 6274112641647677172}
+  - component: {fileID: 5276532774995393158}
+  - component: {fileID: 8120843751481456587}
+  - component: {fileID: 3618465223429425273}
+  - component: {fileID: 7639399745044366835}
+  - component: {fileID: 5538402060827675894}
   m_Layer: 7
-  m_Name: glass mesh
+  m_Name: WineGlass_New
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1678885384658574663
+--- !u!4 &5276532774995393158
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559689679807173441}
+  m_GameObject: {fileID: 7163543132190179657}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.100115955, z: -0, w: 0.9949758}
-  m_LocalPosition: {x: 7.544503, y: -8.795502, z: 1.2299832}
-  m_LocalScale: {x: 3.16075, y: 18.341461, z: 3.160751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.050021, y: 3.33, z: -45.294}
+  m_LocalScale: {x: 0.40434498, y: 0.300121, z: 0.40434498}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8153090321374909550}
+  m_Children:
+  - {fileID: 2602981937279685966}
+  - {fileID: 898218312380389362}
+  - {fileID: 6698239800771304247}
+  - {fileID: 2333279394849938375}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2278208863832890253
+--- !u!33 &8120843751481456587
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559689679807173441}
-  m_Mesh: {fileID: -3528641449261664458, guid: 68633417aa7fb554987c76aec815ac2c, type: 3}
---- !u!23 &6274112641647677172
+  m_GameObject: {fileID: 7163543132190179657}
+  m_Mesh: {fileID: -3528641449261664458, guid: 401180ed0ee52134e9e4302047bf7835, type: 3}
+--- !u!23 &3618465223429425273
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559689679807173441}
+  m_GameObject: {fileID: 7163543132190179657}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -191,7 +150,48 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5136742561442492659
+--- !u!54 &7639399745044366835
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7163543132190179657}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 1
+  m_AngularDamping: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &5538402060827675894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7163543132190179657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703e9b5329d1bbf4bbd32737a46773fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrayItem
+  itemName: WineGlass
+  isImportant: 0
+--- !u!1 &7404243248458834860
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,37 +199,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1998886757010640967}
-  - component: {fileID: 3827530922046754336}
-  m_Layer: 7
-  m_Name: additional upper collider
+  - component: {fileID: 6698239800771304247}
+  - component: {fileID: 5059230394974879764}
+  m_Layer: 0
+  m_Name: collider_bottom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1998886757010640967
+--- !u!4 &6698239800771304247
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136742561442492659}
+  m_GameObject: {fileID: 7404243248458834860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 12.542966, z: 0.009967363}
-  m_LocalScale: {x: 1.3040414, y: 3.8157933, z: 1.3040414}
+  m_LocalPosition: {x: 0, y: -0.046, z: 0}
+  m_LocalScale: {x: 0.03199514, y: 0.29733, z: 0.03199514}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8153090321374909550}
+  m_Father: {fileID: 5276532774995393158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3827530922046754336
+--- !u!64 &5059230394974879764
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136742561442492659}
+  m_GameObject: {fileID: 7404243248458834860}
   m_Material: {fileID: 13400000, guid: 600fdfe5ff609ac429eaa4392c7c4f6f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -238,14 +238,14 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &5964746932834264806
+--- !u!1 &7812110506578627262
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,47 +253,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4855274998718818746}
-  - component: {fileID: 8869893338390946220}
-  - component: {fileID: 6231656962109262897}
-  - component: {fileID: 4483768378429076991}
-  m_Layer: 7
-  m_Name: wine mesh
+  - component: {fileID: 2602981937279685966}
+  - component: {fileID: 6705704266102546725}
+  - component: {fileID: 3758710494910830249}
+  m_Layer: 0
+  m_Name: wine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4855274998718818746
+--- !u!4 &2602981937279685966
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5964746932834264806}
+  m_GameObject: {fileID: 7812110506578627262}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.100115955, z: -0, w: 0.9949758}
-  m_LocalPosition: {x: 7.544503, y: -8.795517, z: 1.2299829}
-  m_LocalScale: {x: 3.16075, y: 18.341461, z: 3.160751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8153090321374909550}
+  m_Father: {fileID: 5276532774995393158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8869893338390946220
+--- !u!33 &6705704266102546725
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5964746932834264806}
-  m_Mesh: {fileID: 7818364579642490131, guid: 68633417aa7fb554987c76aec815ac2c, type: 3}
---- !u!23 &6231656962109262897
+  m_GameObject: {fileID: 7812110506578627262}
+  m_Mesh: {fileID: 7818364579642490131, guid: 401180ed0ee52134e9e4302047bf7835, type: 3}
+--- !u!23 &3758710494910830249
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5964746932834264806}
+  m_GameObject: {fileID: 7812110506578627262}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -312,7 +311,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 763a064f26d8ab74a882777b81881476, type: 2}
+  - {fileID: 2100000, guid: 826a050c3ccea31439d6988fc2cc7d1b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -336,22 +335,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4483768378429076991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5964746932834264806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b67a8aa83ed437c47994dd5e32448d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Wobble
-  MaxWobble: 0.03
-  WobbleSpeed: 1
-  Recovery: 1
---- !u!1 &6909041962722046620
+--- !u!1 &8074010258929641120
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,37 +343,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8355177387622274881}
-  - component: {fileID: 5864425571115930398}
-  m_Layer: 7
-  m_Name: additional mid collider
+  - component: {fileID: 898218312380389362}
+  - component: {fileID: 5015568215143933890}
+  m_Layer: 0
+  m_Name: collider_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8355177387622274881
+--- !u!4 &898218312380389362
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6909041962722046620}
+  m_GameObject: {fileID: 8074010258929641120}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.052137, z: 0.0032855668}
-  m_LocalScale: {x: 0.10224189, y: 5.8343854, z: 0.10224191}
+  m_LocalPosition: {x: 0, y: -0.336, z: 0}
+  m_LocalScale: {x: 0.3201756, y: 0.05451266, z: 0.3201756}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8153090321374909550}
+  m_Father: {fileID: 5276532774995393158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &5864425571115930398
+--- !u!64 &5015568215143933890
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6909041962722046620}
+  m_GameObject: {fileID: 8074010258929641120}
   m_Material: {fileID: 13400000, guid: 600fdfe5ff609ac429eaa4392c7c4f6f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -398,7 +382,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
