@@ -1,0 +1,11 @@
+Model Information:
+* title:	japanese food nimono
+* source:	https://sketchfab.com/3d-models/japanese-food-nimono-345e653b309e4a6095234bc2c173ecf6
+* author:	ediacara (https://sketchfab.com/ediacara)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "japanese food nimono" (https://sketchfab.com/3d-models/japanese-food-nimono-345e653b309e4a6095234bc2c173ecf6) by ediacara (https://sketchfab.com/ediacara) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
