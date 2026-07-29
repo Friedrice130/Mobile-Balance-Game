@@ -6,7 +6,11 @@ public enum GameState { Countdown, Playing, GameOver, GameWin }
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    
+
+    [Header("Level Settings")]
+    public bool useTutorial = false;
+    public bool useCountdown = true;
+
     [Header("Game State")]
     public GameState currentState;
     public UIManager uiManager;
@@ -47,9 +51,24 @@ public class GameManager : MonoBehaviour
             if (isInfiniteTime) uiManager.SetInfiniteTimerDisplay();
             else uiManager.UpdateTimerDisplay(levelTimeInSeconds);
         }
-        
-        yield return StartCoroutine(uiManager.PlayCountdownUI());
 
+        if (useTutorial)
+        {
+            FindAnyObjectByType<TutorialManager>().BeginTutorial();
+            yield break; // Tutorial will start gameplay later
+        }
+
+        if (useCountdown)
+        {
+            yield return StartCoroutine(uiManager.PlayCountdownUI());
+        }
+
+        BeginGameplay();
+
+    }
+
+    public void BeginGameplay()
+    {
         currentTime = levelTimeInSeconds;
         currentState = GameState.Playing;
     }

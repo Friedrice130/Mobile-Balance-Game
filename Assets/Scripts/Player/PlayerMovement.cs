@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     public SoundData footstepSound; 
     public float footstepInterval = 0.4f; // How fast the player takes a step
     private float footstepTimer = 0f;
-    
+
     private Rigidbody rb;
     private float currentForwardSpeed;
     private bool isHolding;
