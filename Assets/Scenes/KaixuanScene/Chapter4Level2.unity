@@ -7402,6 +7402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch20_nonPBR@Sitting (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1d0e625caa6472b4696ed6c5fb2f0897, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b5c4e7f4699b9564da09ffe2e44d3e47, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8808,7 +8812,7 @@ MonoBehaviour:
   useRunAnimation: 0
   turnaroundDelay: 0.5
   impactSound: {fileID: 11400000, guid: 6f0b5f38bfa4b8d44b8b82778847daed, type: 2}
-  giggleSound: {fileID: 11400000, guid: 47fd6269260c24c48832002318ec6847, type: 2}
+  giggleSound: {fileID: 0}
   giggleInterval: 1.5
   walkFootstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   walkStepInterval: 0.5
@@ -9539,6 +9543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch03_nonPBR@Sitting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12205,6 +12213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14872,7 +14884,7 @@ MonoBehaviour:
   useRunAnimation: 1
   turnaroundDelay: 0.5
   impactSound: {fileID: 11400000, guid: 6f0b5f38bfa4b8d44b8b82778847daed, type: 2}
-  giggleSound: {fileID: 11400000, guid: 47fd6269260c24c48832002318ec6847, type: 2}
+  giggleSound: {fileID: 0}
   giggleInterval: 1.5
   walkFootstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   walkStepInterval: 0.5
@@ -16613,7 +16625,7 @@ Transform:
   m_GameObject: {fileID: 374695469}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.54006004, y: 20.92008, z: 6.48346}
+  m_LocalPosition: {x: -0.54006004, y: 20.882, z: 6.483}
   m_LocalScale: {x: -0.10411, y: -0.01127, z: -0.10411}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17760,6 +17772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21924,7 +21940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541948976}
   - component: {fileID: 541948977}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Colider Bridge Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22787,6 +22803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22861,6 +22881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23485,6 +23509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24302,6 +24330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch03_nonPBR@Sitting (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24782,7 +24814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643069452}
   - component: {fileID: 643069453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Colider Bridge Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29710,7 +29742,7 @@ MonoBehaviour:
   useRunAnimation: 0
   turnaroundDelay: 0.5
   impactSound: {fileID: 11400000, guid: 6f0b5f38bfa4b8d44b8b82778847daed, type: 2}
-  giggleSound: {fileID: 11400000, guid: 47fd6269260c24c48832002318ec6847, type: 2}
+  giggleSound: {fileID: 0}
   giggleInterval: 1.5
   walkFootstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   walkStepInterval: 0.5
@@ -31916,6 +31948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34367,7 +34403,7 @@ Transform:
   m_GameObject: {fileID: 912657190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.50635, y: 25.44089, z: 6.48346}
+  m_LocalPosition: {x: -1.50635, y: 25.383, z: 6.483}
   m_LocalScale: {x: -0.10411, y: -0.01127, z: -0.10411}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36146,7 +36182,7 @@ Transform:
   m_GameObject: {fileID: 957382649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.55669004, y: 27.5205, z: 6.48346}
+  m_LocalPosition: {x: -0.55669004, y: 27.475, z: 6.483}
   m_LocalScale: {x: -0.10411, y: -0.01127, z: -0.10411}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36789,6 +36825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43823,7 +43863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000015258789
+      value: -0.000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -44206,6 +44246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45912,7 +45956,7 @@ MonoBehaviour:
   useRunAnimation: 0
   turnaroundDelay: 0.5
   impactSound: {fileID: 11400000, guid: 6f0b5f38bfa4b8d44b8b82778847daed, type: 2}
-  giggleSound: {fileID: 11400000, guid: 47fd6269260c24c48832002318ec6847, type: 2}
+  giggleSound: {fileID: 0}
   giggleInterval: 1.5
   walkFootstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   walkStepInterval: 0.5
@@ -48607,6 +48651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch20_nonPBR@Sitting
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1d0e625caa6472b4696ed6c5fb2f0897, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b5c4e7f4699b9564da09ffe2e44d3e47, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55266,6 +55314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch20_nonPBR@Sitting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1d0e625caa6472b4696ed6c5fb2f0897, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b5c4e7f4699b9564da09ffe2e44d3e47, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62541,6 +62593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -71856,7 +71912,7 @@ Transform:
   m_GameObject: {fileID: 1632830167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0929999, y: 19.40439, z: 6.48346}
+  m_LocalPosition: {x: -1.0929999, y: 19.425, z: 6.483}
   m_LocalScale: {x: 0.10411, y: 0.01127, z: 0.10411}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -72233,7 +72289,7 @@ MonoBehaviour:
   useRunAnimation: 1
   turnaroundDelay: 0.5
   impactSound: {fileID: 11400000, guid: 6f0b5f38bfa4b8d44b8b82778847daed, type: 2}
-  giggleSound: {fileID: 11400000, guid: 47fd6269260c24c48832002318ec6847, type: 2}
+  giggleSound: {fileID: 0}
   giggleInterval: 1.5
   walkFootstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   walkStepInterval: 0.5
@@ -76451,7 +76507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.406
+      value: -16.775
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -76485,6 +76541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -77491,6 +77551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -87361,6 +87425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch03_nonPBR@Sitting (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

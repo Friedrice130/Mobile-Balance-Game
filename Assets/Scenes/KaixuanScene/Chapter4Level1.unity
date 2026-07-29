@@ -234,11 +234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.877
+      value: 53.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1
+      value: -5.321
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -276,6 +276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -345,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5855,7 +5863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6596187605506560093, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9183565482290412746, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9129,6 +9137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9970,6 +9982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12852,6 +12868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch03_nonPBR@Sitting (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18275,6 +18295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch03_nonPBR@Sitting (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21704,6 +21728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22099,6 +22127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22621,6 +22653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 821285497}
+  - component: {fileID: 821285498}
   m_Layer: 0
   m_Name: Ch03_nonPBR@Sitting (5)
   m_TagString: Untagged
@@ -22645,6 +22678,28 @@ Transform:
   - {fileID: 1744697396}
   m_Father: {fileID: 1454201801}
   m_LocalEulerAnglesHint: {x: 0, y: -155.632, z: 0}
+--- !u!95 &821285498
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821285496}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &824462738
 GameObject:
   m_ObjectHideFlags: 0
@@ -24052,7 +24107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7744684775777912256, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31731,6 +31786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch03_nonPBR@Sitting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33578,7 +33637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.71
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33586,7 +33645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 89.69
+      value: 89.54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -38870,6 +38929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch20_nonPBR@Sitting
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1d0e625caa6472b4696ed6c5fb2f0897, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b5c4e7f4699b9564da09ffe2e44d3e47, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44090,6 +44153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch20_nonPBR@Sitting (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1d0e625caa6472b4696ed6c5fb2f0897, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b5c4e7f4699b9564da09ffe2e44d3e47, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46674,7 +46741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7744684775777912256, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46857,6 +46924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -48037,6 +48108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sporty Granny@Sitting (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 02f0e969547188d47a06f5a96adc11e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 818168645b9d8184f86ef6a16c5084ec, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50202,7 +50277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6596187605506560093, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9183565482290412746, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50425,7 +50500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.83
+      value: 27.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50467,6 +50542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch29_nonPBR@Sitting Laughing (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: b176190ed39e35240b6fa6a43283c12b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca7157017a032c24c8a21df37c052299, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50513,6 +50592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1898073287}
+  - component: {fileID: 1898073288}
   m_Layer: 0
   m_Name: Ch03_nonPBR@Sitting (3)
   m_TagString: Untagged
@@ -50537,6 +50617,28 @@ Transform:
   - {fileID: 835351526}
   m_Father: {fileID: 1454201801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1898073288
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898073286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1899261802
 GameObject:
   m_ObjectHideFlags: 0
@@ -52629,6 +52731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032742891}
+  - component: {fileID: 2032742892}
   m_Layer: 0
   m_Name: Ch03_nonPBR@Sitting (4)
   m_TagString: Untagged
@@ -52653,6 +52756,28 @@ Transform:
   - {fileID: 1261282752}
   m_Father: {fileID: 1454201801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2032742892
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032742890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2034896778
 GameObject:
   m_ObjectHideFlags: 0
@@ -58857,6 +58982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2299416012490853043}
+  - component: {fileID: 2299416012490853044}
   m_Layer: 0
   m_Name: Ch03_nonPBR@Sitting
   m_TagString: Untagged
@@ -60709,6 +60835,28 @@ Transform:
   - {fileID: 6032985540500040231}
   m_Father: {fileID: 1454201801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2299416012490853044
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487025716400525321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6371eab0f578c284fb1fba7100db11d9, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3b6ffe775a5fa5d40ac1078bf459c3e0, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2299662921044811785
 GameObject:
   m_ObjectHideFlags: 0
