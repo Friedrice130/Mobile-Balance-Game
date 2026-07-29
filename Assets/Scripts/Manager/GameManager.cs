@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public enum GameState { Countdown, Playing, GameOver, GameWin }
 
@@ -49,6 +50,28 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         Debug.Log("GameManager Destroyed");
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Time.timeScale = 1f;
+
+        currentState = GameState.Countdown;
+        currentTime = levelTimeInSeconds;
+
+        uiManager = FindAnyObjectByType<UIManager>();
+
+        StartCoroutine(StartLevelRoutine());
     }
 
     void Start()
