@@ -734,8 +734,8 @@ MonoBehaviour:
   defaultPlayBuildIndex: 1
   chapter1BuildIndex: 1
   chapter2BuildIndex: 1
-  chapter3BuildIndex: 1
-  chapter4BuildIndex: 1
+  chapter3BuildIndex: 4
+  chapter4BuildIndex: 7
 --- !u!114 &720584670
 MonoBehaviour:
   m_ObjectHideFlags: 0
