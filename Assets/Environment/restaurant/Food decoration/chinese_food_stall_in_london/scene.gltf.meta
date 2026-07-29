@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: e3e4a8c2448fe1a4e9ae5748148140c6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\scene.bin
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\scene.bin
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_specularf0.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_pots_specularf0.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_KitchenEq_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_KitchenEq_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_KitchenEq_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_KitchenEq_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_KitchenEq_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_KitchenEq_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_misc_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_misc_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_misc_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_misc_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_misc_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_misc_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_specularf0.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_BackEquipment_specularf0.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wokwoodwok_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wokwoodwok_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wokwoodwok_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wokwoodwok_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wokwoodwok_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wokwoodwok_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_emissive.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_emissive.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Utensils_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_specularf0.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_stilts_specularf0.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_CookingSauces_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_CookingSauces_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_CookingSauces_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_CookingSauces_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_CookingSauces_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_CookingSauces_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_basesides_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_basesides_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_basesides_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_basesides_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_basesides_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_basesides_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_specularf0.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Signs_specularf0.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Boxes_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Boxes_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Boxes_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Boxes_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Boxes_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Boxes_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables2_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables2_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables2_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables2_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables2_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Tables2_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_specularf0.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_WoodPanels_specularf0.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_emissive.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_emissive.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_Roof_normal.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wok2_baseColor.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wok2_baseColor.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wok2_metallicRoughness.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wok2_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wok2_normal.png
+    assetPath: Assets\Environment\restaurant\Food decoration\chinese_food_stall_in_london\textures\FS_wok2_normal.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_emissive_strength
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_sheen
+  - type: 0
+    code: 52
+    messages:
+    - 2
+  - type: 0
+    code: 52
+    messages:
+    - 2
+  - type: 0
+    code: 52
+    messages:
+    - 2
+  - type: 0
+    code: 52
+    messages:
+    - 2
+  - type: 0
+    code: 52
+    messages:
+    - 2
