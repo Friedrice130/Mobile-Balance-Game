@@ -81,11 +81,12 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlayMusic(TempBGM);
         }
         
-        StartCoroutine(StartLevelRoutine());
+        //StartCoroutine(StartLevelRoutine());
     }
 
     private IEnumerator StartLevelRoutine()
     {
+        Debug.Log("StartLevelRoutine");
         currentState = GameState.Countdown;
 
         if (uiManager != null)
