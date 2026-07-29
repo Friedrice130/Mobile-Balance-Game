@@ -390,11 +390,18 @@ MonoBehaviour:
   strafeSensitivity: 6
   maxStrafeX: 3
   strafeSmoothness: 1.5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  playerRadius: 0.4
+  trayReach: 0.6
+  stepHeight: 0.3
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   groundCheckHeight: 1.4
   groundOffset: 1
+  lookAheadDistance: 0.3
   bumpHarshness: 5
   alignToSlopes: 1
   slopeSmoothness: 10
@@ -6594,7 +6601,7 @@ Transform:
   m_GameObject: {fileID: 916495804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 2.7, z: 51.92}
+  m_LocalPosition: {x: 0.3, y: 2.7, z: -36.6}
   m_LocalScale: {x: 15, y: 15, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15556,10 +15563,16 @@ MonoBehaviour:
   masterSlider: {fileID: 2626301004421578729}
   musicSlider: {fileID: 4736688265458930351}
   sfxSlider: {fileID: 1034513083866064745}
+  countdownBeepSound: {fileID: 0}
+  countdownStartSound: {fileID: 0}
   countdownText: {fileID: 6431267370708490992}
   timerText: {fileID: 9202533687483214311}
   gameOverPanel: {fileID: 4582348357502053101}
   gameWinPanel: {fileID: 1157733379807040030}
+  scoreText: {fileID: 0}
+  rankSPlus: {fileID: 0}
+  rankA: {fileID: 0}
+  rankB: {fileID: 0}
   trayBalancer: {fileID: 5415639739458499350}
   mainMenuBuildIndex: 0
 --- !u!1 &3599341550592803089
@@ -16870,6 +16883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e742b0edbed401c47a78ef32fff41c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  useTutorial: 0
+  useCountdown: 1
   currentState: 1
   uiManager: {fileID: 3595677259277824164}
   isInfiniteTime: 1

@@ -26,10 +26,29 @@ public class GameManager : MonoBehaviour
     public float CurrentTime => currentTime;
     public float MaxTime => levelTimeInSeconds;
 
-    void Awake()
+    /*void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+    }*/
+
+    void Awake()
+    {
+        Debug.Log("GameManager Awake");
+
+        if (Instance != null && Instance != this)
+        {
+            Debug.Log("Duplicate GameManager destroyed");
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("GameManager Destroyed");
     }
 
     void Start()
