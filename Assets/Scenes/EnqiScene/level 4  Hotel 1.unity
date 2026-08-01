@@ -35808,7 +35808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: HennessyBottle
-  isImportant: 0
+  isImportant: 1
 --- !u!54 &1086523267
 Rigidbody:
   m_ObjectHideFlags: 0

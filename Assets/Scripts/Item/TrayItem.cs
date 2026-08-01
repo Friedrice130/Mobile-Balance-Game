@@ -1,7 +1,6 @@
 using UnityEngine;
 using CandyCoded.HapticFeedback;
 
-
 public class TrayItem : MonoBehaviour
 {
     [Header("Item Properties")]
