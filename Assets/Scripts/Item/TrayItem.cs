@@ -8,8 +8,20 @@ public class TrayItem : MonoBehaviour
     public string itemName;
     public bool isImportant = false;
 
+    [Header("Tutorial")]
+    public bool stickToTray = false;
+    public Transform trayAnchor;   // Assign TrayVisual here
+
     private bool isDestroyed = false;
 
+    void LateUpdate()
+    {
+        if (stickToTray && trayAnchor != null)
+        {
+            transform.position = trayAnchor.position;
+            transform.rotation = trayAnchor.rotation;
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -29,7 +41,7 @@ public class TrayItem : MonoBehaviour
             else
             {
                 isDestroyed = true;
-                Destroy(gameObject, 2f);
+                //Destroy(gameObject, 2f);
             }
         }
     }
@@ -45,6 +57,6 @@ public class TrayItem : MonoBehaviour
         }
 
         
-        Destroy(gameObject, 2f);
+        //Destroy(gameObject, 2f);
     }
 }
