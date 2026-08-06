@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     public SoundData footstepSound; 
     public float footstepInterval = 0.4f; // How fast the player takes a step
     private float footstepTimer = 0f;
+
     
     private Rigidbody rb;
     private float currentForwardSpeed;
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     private float turnElapsed = 0f;
     private float turnDuration = 1f;
     private Vector3 currentHeading;
+    private string trayItemTag = "Item";
 
     public void StartAutoTurn(float angle, float duration)
     {
@@ -65,6 +67,51 @@ public class PlayerMovement : MonoBehaviour
         turnDuration = duration;
         turnElapsed = 0f;
         isTurning = true;
+    }
+
+    public void Teleport(Vector3 newPosition, Quaternion newRotation)
+    {
+        GameObject[] trayItems = GameObject.FindGameObjectsWithTag(trayItemTag);
+
+        Vector3[] itemLocalPositions = new Vector3[trayItems.Length];
+        Quaternion[] itemLocalRotations = new Quaternion[trayItems.Length];
+
+        for (int i = 0; i < trayItems.Length; i++)
+        {
+            itemLocalPositions[i] = transform.InverseTransformPoint(trayItems[i].transform.position);
+            itemLocalRotations[i] = Quaternion.Inverse(transform.rotation) * trayItems[i].transform.rotation;
+        }
+
+        rb.position = newPosition;
+        rb.rotation = newRotation;
+        transform.position = newPosition;
+        transform.rotation = newRotation;
+        
+        pathCenter = newPosition;
+        targetStrafeOffset = 0f;
+        currentStrafeOffset = 0f;
+        currentForwardSpeed = 0f;
+        currentHeading = Vector3.ProjectOnPlane(newRotation * Vector3.forward, Vector3.up).normalized;
+
+        Physics.SyncTransforms();
+
+        for (int i = 0; i < trayItems.Length; i++)
+        {
+            Rigidbody itemRb = trayItems[i].GetComponent<Rigidbody>();
+            if (itemRb != null)
+            {
+                Vector3 newItemPos = transform.TransformPoint(itemLocalPositions[i]);
+                Quaternion newItemRot = transform.rotation * itemLocalRotations[i];
+
+                itemRb.position = newItemPos;
+                itemRb.rotation = newItemRot;
+                trayItems[i].transform.position = newItemPos;
+                trayItems[i].transform.rotation = newItemRot;
+                
+                itemRb.linearVelocity = Vector3.zero;
+                itemRb.angularVelocity = Vector3.zero;
+            }
+        }
     }
 
     void Start()

@@ -153,16 +153,22 @@ public class AudioManager : MonoBehaviour
             if (source != null && source.isPlaying) source.Stop();
         }
 
-        DynamicWeatherSystem.AudioModule weatherAudio = FindObjectOfType<DynamicWeatherSystem.AudioModule>();
+        DynamicWeatherSystem.AudioModule weatherAudio = FindAnyObjectByType<DynamicWeatherSystem.AudioModule>();
         if (weatherAudio != null)
         {
             weatherAudio.StopWeatherAudio();
         }
         
-        LightningGenerator lightning = FindObjectOfType<LightningGenerator>();
+        LightningGenerator lightning = FindAnyObjectByType<LightningGenerator>();
         if (lightning != null)
         {
             lightning.StopStorm();
+        }
+
+        RedLightManager redLightGame = FindAnyObjectByType<RedLightManager>();
+        if (redLightGame != null)
+        {
+            redLightGame.StopMiniGame();
         }
 
         foreach (AudioSource loopingSource in activeLoopingSources)
