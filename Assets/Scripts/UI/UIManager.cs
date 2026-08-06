@@ -430,4 +430,11 @@ public class UIManager : MonoBehaviour
     {
         pauseButton.SetActive(visible);
     }
+    public void SetTimerVisible(bool visible)
+    {
+        if (timerText != null)
+        {
+            timerText.gameObject.SetActive(visible);
+        }
+    }
 }

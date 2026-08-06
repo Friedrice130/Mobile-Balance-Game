@@ -26,6 +26,13 @@ public class TrayBalancer : MonoBehaviour
     private float currentTiltAngleLR = 0f;
     private float currentTiltAngleFB = 0f;
 
+    public bool tutorialTiltEnabled = false;
+
+    private float defaultMaxTiltAngleLR;
+    private float defaultMaxTiltAngleFB;
+    private float defaultTiltSmoothness;
+    private float defaultTiltSensitivity;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,6 +43,19 @@ public class TrayBalancer : MonoBehaviour
         {
             InputSystem.EnableDevice(Accelerometer.current);
         }
+
+        defaultMaxTiltAngleLR = maxTiltAngleLR;
+        defaultMaxTiltAngleFB = maxTiltAngleFB;
+        defaultTiltSmoothness = tiltSmoothness;
+        defaultTiltSensitivity = tiltSensitivity;
+
+        if (GameManager.Instance != null && GameManager.Instance.useTutorial)
+        {
+            maxTiltAngleLR = 10f;
+            maxTiltAngleFB = 10f;
+            tiltSmoothness = 3f;
+            tiltSensitivity = 0.5f;
+        }
     }
 
     void FixedUpdate()
@@ -43,8 +63,12 @@ public class TrayBalancer : MonoBehaviour
         if (targetAnchor == null) return;
 
         // Only allow tray to tilt if game state is Playing
-        if (GameManager.Instance != null && GameManager.Instance.currentState != GameState.Playing) return;
-        
+        //if (GameManager.Instance != null && GameManager.Instance.currentState != GameState.Playing) return;
+        if (GameManager.Instance != null &&
+            GameManager.Instance.currentState != GameState.Playing &&
+            !tutorialTiltEnabled)
+            return;
+
         float targetTiltLR = 0f;
         float targetTiltFB = 0f;
 
@@ -92,4 +116,5 @@ public class TrayBalancer : MonoBehaviour
         Quaternion localTilt = Quaternion.Euler(currentTiltAngleFB, 0f, -currentTiltAngleLR);
         rb.MoveRotation(targetAnchor.rotation * localTilt);
     }
+
 }

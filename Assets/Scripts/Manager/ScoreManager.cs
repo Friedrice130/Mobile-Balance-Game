@@ -70,4 +70,9 @@ public class ScoreManager : MonoBehaviour
             return Rank.B;
         }
     }
+
+    public bool IsTutorialScore()
+    {
+        return GameManager.Instance.useTutorial;
+    }
 }

@@ -162,9 +162,20 @@ public class GameManager : MonoBehaviour
 
         if (uiManager != null)
         {
-            int actualScore = ScoreManager.Instance.FinalScore;
-            int displayScore = ScoreManager.Instance.DisplayScore;
-            Rank rank = ScoreManager.Instance.FinalRank;
+            int displayScore;
+            Rank rank;
+
+            if (useTutorial)
+            {
+                // Tutorial level: force high score
+                displayScore = 999;
+                rank = Rank.SPlus;
+            }
+            else
+            {
+                displayScore = ScoreManager.Instance.DisplayScore;
+                rank = ScoreManager.Instance.FinalRank;
+            }
 
             uiManager.ShowGameWin(displayScore, rank);
         }
