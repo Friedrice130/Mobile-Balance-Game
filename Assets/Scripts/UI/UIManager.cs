@@ -425,4 +425,16 @@ public class UIManager : MonoBehaviour
         SetMixerVolume("SFXVol", value);
         PlayerPrefs.SetFloat("SavedSFXVol", value);
     }
+
+    public void SetPauseButton(bool visible)
+    {
+        pauseButton.SetActive(visible);
+    }
+    public void SetTimerVisible(bool visible)
+    {
+        if (timerText != null)
+        {
+            timerText.gameObject.SetActive(visible);
+        }
+    }
 }
