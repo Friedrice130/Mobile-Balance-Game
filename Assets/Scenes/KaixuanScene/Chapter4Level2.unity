@@ -22662,6 +22662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowl (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6596187605506560093, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7520020507393134358, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: isImportant
       value: 1
@@ -22672,7 +22676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183565482290412746, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.715
+      value: 3.2989998
       objectReference: {fileID: 0}
     - target: {fileID: 9183565482290412746, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -43867,7 +43871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00002670288
+      value: -0.0000038146973
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -44418,7 +44422,7 @@ Transform:
   m_GameObject: {fileID: 1067182128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7238935, z: -0, w: 0.6899117}
-  m_LocalPosition: {x: 89.1, y: 1.54, z: 33.826}
+  m_LocalPosition: {x: 89.1, y: 3.0249999, z: 33.826}
   m_LocalScale: {x: 2.8000004, y: 3.3325198, z: 2.1214592}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -62457,6 +62461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowl
       objectReference: {fileID: 0}
+    - target: {fileID: 6596187605506560093, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7520020507393134358, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: isImportant
       value: 1
@@ -62467,7 +62475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9183565482290412746, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.694
+      value: 3.2779999
       objectReference: {fileID: 0}
     - target: {fileID: 9183565482290412746, guid: aaf51730e6330d545b898be88000a8b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73127,7 +73135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2370115466088578124, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.583
+      value: 3.1669998
       objectReference: {fileID: 0}
     - target: {fileID: 2370115466088578124, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73164,6 +73172,10 @@ PrefabInstance:
     - target: {fileID: 7744684775777912256, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_Name
       value: BeerMug (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744684775777912256, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73672,7 +73684,7 @@ Transform:
   m_GameObject: {fileID: 1681868449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7238935, z: -0, w: 0.6899117}
-  m_LocalPosition: {x: 90.01924, y: 2.1090002, z: 34.244194}
+  m_LocalPosition: {x: 90.01924, y: 2.3189194, z: 34.244194}
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -95127,7 +95139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2370115466088578124, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.585
+      value: 3.169
       objectReference: {fileID: 0}
     - target: {fileID: 2370115466088578124, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95164,6 +95176,10 @@ PrefabInstance:
     - target: {fileID: 7744684775777912256, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
       propertyPath: m_Name
       value: BeerMug
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744684775777912256, guid: 51e04fa4a4d8a434081a043b97ed2693, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
