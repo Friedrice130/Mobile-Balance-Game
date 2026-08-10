@@ -18,6 +18,11 @@ public class RedLightManager : MonoBehaviour
     public Transform dollPivot;
     public float turnSpeed = 0.2f;
 
+    [Header("UI Notifications")]
+    public TypewriterUI introUI;
+    [TextArea] 
+    public string introText = "Let's play a game.\nGreen light, you walk. Red light, you die.";
+
     [Header("Audio")]
     public AudioSource singingSource;
     public SoundData scanSound;
@@ -66,6 +71,12 @@ public class RedLightManager : MonoBehaviour
         
         isGameActive = true;
         isFailing = false;
+
+        if (introUI != null && !string.IsNullOrEmpty(introText))
+        {
+            introUI.ShowMessage(introText);
+        }
+
         gameCycleCoroutine = StartCoroutine(GameCycleRoutine());
     }
 
@@ -85,7 +96,7 @@ public class RedLightManager : MonoBehaviour
         if (!isGameActive) return;
 
         StopMiniGame();
-        
+
         foreach (GameObject obj in objectsToDisableOnWin)
         {
             if (obj != null) obj.SetActive(false);
