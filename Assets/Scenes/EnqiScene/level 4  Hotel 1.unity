@@ -2616,6 +2616,7 @@ MonoBehaviour:
   slopeSmoothness: 10
   footstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   footstepInterval: 0.4
+  tutorialMovementEnabled: 0
 --- !u!54 &68664561
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5671,6 +5672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: JackBottle
   isImportant: 0
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!54 &178125864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20194,6 +20197,103 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a461bffb67edf6848bd4f149581eebdf, type: 3}
+--- !u!1001 &654349065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645691164757449592, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646677985285949213, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
+      propertyPath: m_Name
+      value: TransitionCanvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 675feb23320f30c43b2fa6371460e58d, type: 3}
 --- !u!1001 &655275687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34686,6 +34786,7 @@ MonoBehaviour:
   invertTiltFB: 0
   tiltSmoothness: 5
   tiltSensitivity: 1.5
+  tutorialTiltEnabled: 0
 --- !u!54 &1057026113
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35809,6 +35910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: HennessyBottle
   isImportant: 1
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!54 &1086523267
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93319,3 +93422,4 @@ SceneRoots:
   - {fileID: 1086523269}
   - {fileID: 1677596473}
   - {fileID: 1084944865}
+  - {fileID: 654349065}

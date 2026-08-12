@@ -64,6 +64,11 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.buildIndex == 0)
+        {
+            return;
+        }
+        
         Time.timeScale = 1f;
 
         currentState = GameState.Countdown;
@@ -86,6 +91,14 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StartLevelRoutine()
     {
+        if (ScreenFader.Instance != null)
+        {
+            while (ScreenFader.Instance.isFading)
+            {
+                yield return null;
+            }
+        }
+
         Debug.Log("StartLevelRoutine");
         currentState = GameState.Countdown;
 
