@@ -49,6 +49,11 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+
         Debug.Log("GameManager Destroyed");
     }
 
@@ -66,6 +71,10 @@ public class GameManager : MonoBehaviour
     {
         if (scene.buildIndex == 0)
         {
+            if (gameObject != null)
+            {
+                Destroy(gameObject);
+            }
             return;
         }
         
@@ -76,17 +85,23 @@ public class GameManager : MonoBehaviour
 
         uiManager = FindAnyObjectByType<UIManager>();
 
+        if (AudioManager.Instance != null)
+        {
+            if (TempBGM != null)
+            {
+                AudioManager.Instance.PlayMusic(TempBGM);
+            }
+            else
+            {
+                AudioManager.Instance.StopAllGameplayAudio();
+            }
+        }
+
         StartCoroutine(StartLevelRoutine());
     }
 
     void Start()
     {
-        if (AudioManager.Instance != null && TempBGM != null)
-        {
-            AudioManager.Instance.PlayMusic(TempBGM);
-        }
-        
-        //StartCoroutine(StartLevelRoutine());
     }
 
     private IEnumerator StartLevelRoutine()

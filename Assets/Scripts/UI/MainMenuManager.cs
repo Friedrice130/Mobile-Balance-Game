@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -15,9 +17,52 @@ public class MainMenuManager : MonoBehaviour
     public int chapter3BuildIndex = 1;
     public int chapter4BuildIndex = 1;
 
+    [Header("Audio Settings")]
+    public SoundData mainMenuBGM;
+    public AudioMixer mainMixer;
+
     void Start()
     {
         ShowMainMenu();
+
+        StartCoroutine(InitializeAudioAndPlayMusic());
+    }
+
+    private IEnumerator InitializeAudioAndPlayMusic()
+    {
+        yield return new WaitForSecondsRealtime(0.1f); 
+
+        if (mainMixer != null)
+        {
+            float master = PlayerPrefs.GetFloat("SavedMasterVol", 1f);
+            float music = PlayerPrefs.GetFloat("SavedMusicVol", 1f);
+            float sfx = PlayerPrefs.GetFloat("SavedSFXVol", 1f);
+
+            SetMixerVolume("MasterVol", master);
+            SetMixerVolume("MusicVol", music);
+            SetMixerVolume("SFXVol", sfx);
+            
+            Debug.Log("Audio Mixer Volumes Loaded Successfully.");
+        }
+        else
+        {
+            Debug.LogWarning("Main Mixer is NOT assigned in the MainMenuManager!");
+        }
+        
+        if (AudioManager.Instance != null && mainMenuBGM != null)
+        {
+            AudioManager.Instance.PlayMusic(mainMenuBGM);
+            Debug.Log("Main Menu BGM Started.");
+        }
+    }
+
+    private void SetMixerVolume(string parameterName, float sliderValue)
+    {
+        if (mainMixer == null) return;
+
+        float clampedValue = Mathf.Clamp(sliderValue, 0.0001f, 1f);
+        float decibelValue = Mathf.Log10(clampedValue) * 20f;
+        mainMixer.SetFloat(parameterName, decibelValue);
     }
 
     // Main Menu 
