@@ -44641,6 +44641,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: WineGlass
   isImportant: 0
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!54 &815171032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54765,14 +54767,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   topSpeed: 5
-  acceleration: 5
-  strafeSensitivity: 15
-  maxStrafeX: 4
-  strafeSmoothness: 5
+  acceleration: 0.5
+  strafeSensitivity: 6
+  maxStrafeX: 3
+  strafeSmoothness: 1.5
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 512
-  playerRadius: 1
+    m_Bits: 0
+  playerRadius: 0.4
   trayReach: 0.6
   stepHeight: 0.3
   groundLayer:
@@ -54781,11 +54783,12 @@ MonoBehaviour:
   groundCheckHeight: 1.4
   groundOffset: 2
   lookAheadDistance: 0.3
-  bumpHarshness: 2
+  bumpHarshness: 3
   alignToSlopes: 1
   slopeSmoothness: 10
   footstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   footstepInterval: 0.4
+  tutorialMovementEnabled: 0
 --- !u!54 &1015802952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -59349,6 +59352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: JackBottle
   isImportant: 0
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!54 &1127674140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -60085,7 +60090,11 @@ PrefabInstance:
       objectReference: {fileID: 6849150411094407089}
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: isInfiniteTime
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
+      propertyPath: levelTimeInSeconds
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 7184743294963013847, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82518,6 +82527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: WineBottle
   isImportant: 0
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!54 &1636076093
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93801,6 +93812,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: WineGlass
   isImportant: 0
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!54 &1921991174
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105796,6 +105809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: WineGlass
   isImportant: 1
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!4 &497121844165961273
 Transform:
   m_ObjectHideFlags: 0
@@ -110122,6 +110137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: HennessyBottle
   isImportant: 1
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!33 &2623191660434962665
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -112854,6 +112871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: WineBottle
   isImportant: 1
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!224 &3944450653086835941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -118124,6 +118143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrayItem
   itemName: JackBottle
   isImportant: 0
+  stickToTray: 0
+  trayAnchor: {fileID: 0}
 --- !u!222 &6470775486675776790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -119327,6 +119348,7 @@ MonoBehaviour:
   invertTiltFB: 0
   tiltSmoothness: 5
   tiltSensitivity: 1.5
+  tutorialTiltEnabled: 0
 --- !u!33 &7162527897057050570
 MeshFilter:
   m_ObjectHideFlags: 0
