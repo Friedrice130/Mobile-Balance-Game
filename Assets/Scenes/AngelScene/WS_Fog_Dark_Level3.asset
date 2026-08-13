@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e007c8c62db5ee84a934ac4093518a6a, type: 3}
+  m_Name: WS_Fog_Dark_Level3
+  m_EditorClassIdentifier: 
+  stateName: FogDark
+  fogEnabled: 1
+  fogColor: {r: 0.23773581, g: 0.23773581, b: 0.23773581, a: 0.39215687}
+  fogDensity: 0.03
+  lightColor: {r: 0.16470589, g: 0.28235295, b: 0.41960785, a: 1}
+  lightIntensity: 0.25
+  ambientColor: {r: 0.13181199, g: 0.14935063, b: 0.19245279, a: 1}
+  skyboxTint: {r: 0.38039216, g: 0.4, b: 0.5019608, a: 1}
+  skyboxExposure: 0.22
+  ambientClip: {fileID: 8300000, guid: a883342c9053d49459575441124734fc, type: 3}
+  ambientVolume: 0.8
+  rainIntensity: 0
+  rainColor: {r: 0.7, g: 0.8, b: 0.9, a: 0.35}
+  rainSpeed: 8
