@@ -45,6 +45,15 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
+        if (gameWinPanel != null) gameWinPanel.SetActive(false);
+        if (pauseMenuPanel != null) pauseMenuPanel.SetActive(false);
+        if (rankSPlus != null) rankSPlus.SetActive(false);
+        if (rankA != null) rankA.SetActive(false);
+        if (rankB != null) rankB.SetActive(false);
+
         if (trayBalancer != null)
         {
             // Load Saved Settings (Left/Right)
@@ -64,10 +73,10 @@ public class UIManager : MonoBehaviour
             float savedSFX = PlayerPrefs.GetFloat("SavedSFXVol", 1f);
 
             // Sync UI
-            sensitivitySlider.value = trayBalancer.tiltSensitivity;
-            masterSlider.value = savedMaster;
-            musicSlider.value = savedMusic;
-            sfxSlider.value = savedSFX;
+            if (sensitivitySlider != null) sensitivitySlider.value = trayBalancer.tiltSensitivity;
+            if (masterSlider != null) masterSlider.value = savedMaster;
+            if (musicSlider != null) musicSlider.value = savedMusic;
+            if (sfxSlider != null) sfxSlider.value = savedSFX;
 
             if (angleSliderLR != null) angleSliderLR.value = trayBalancer.maxTiltAngleLR;
             if (angleSliderFB != null) angleSliderFB.value = trayBalancer.maxTiltAngleFB;
@@ -77,13 +86,6 @@ public class UIManager : MonoBehaviour
 
             StartCoroutine(InitializeAudioMixer(savedMaster, savedMusic, savedSFX));
         }
-
-        Time.timeScale = 1f;
-        pauseMenuPanel.SetActive(false);
-        gameWinPanel.SetActive(false);
-        rankSPlus.SetActive(false);
-        rankA.SetActive(false);
-        rankB.SetActive(false);
     }
 
     public IEnumerator PlayCountdownUI()
@@ -95,6 +97,8 @@ public class UIManager : MonoBehaviour
         if (AudioManager.Instance != null && countdownBeepSound != null) 
             AudioManager.Instance.Play2D(countdownBeepSound);
         yield return new WaitForSeconds(1f);
+
+        if (countdownText == null) yield break;
 
         countdownText.text = "2";
         if (AudioManager.Instance != null && countdownBeepSound != null) 
@@ -363,7 +367,16 @@ public class UIManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (ScreenFader.Instance != null)
+        {
+            ScreenFader.Instance.LoadChapterWithFade(currentSceneIndex, "");
+        }
+        else
+        {
+            SceneManager.LoadScene(currentSceneIndex);
+        }
     }
 
     public void ReturnToMainMenu()

@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        StopAllCoroutines();
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
