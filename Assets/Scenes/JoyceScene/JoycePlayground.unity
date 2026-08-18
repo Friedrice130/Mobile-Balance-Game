@@ -440,6 +440,7 @@ MonoBehaviour:
   slopeSmoothness: 10
   footstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   footstepInterval: 0.4
+  tutorialMovementEnabled: 0
 --- !u!1 &200438029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6883,7 +6884,7 @@ Transform:
   m_GameObject: {fileID: 916495804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 2.7, z: 8.6}
+  m_LocalPosition: {x: 0.3, y: 2.7, z: -30.8}
   m_LocalScale: {x: 15, y: 15, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16439,6 +16440,7 @@ MonoBehaviour:
   invertTiltFB: 0
   tiltSmoothness: 5
   tiltSensitivity: 1.5
+  tutorialTiltEnabled: 0
 --- !u!65 &1295527384527864142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17635,7 +17637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1828960469150053387
 Transform:
   m_ObjectHideFlags: 0
@@ -20056,6 +20058,7 @@ MonoBehaviour:
   invertTiltFB: 0
   tiltSmoothness: 5
   tiltSensitivity: 1.5
+  tutorialTiltEnabled: 0
 --- !u!1 &3146673438250140684
 GameObject:
   m_ObjectHideFlags: 0
@@ -23961,6 +23964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e742b0edbed401c47a78ef32fff41c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  useTutorial: 0
+  useCountdown: 1
   currentState: 1
   uiManager: {fileID: 3595677259277824164}
   isInfiniteTime: 0
@@ -24607,6 +24612,7 @@ MonoBehaviour:
   invertTiltFB: 0
   tiltSmoothness: 5
   tiltSensitivity: 1.5
+  tutorialTiltEnabled: 0
 --- !u!1 &5558953587372189114
 GameObject:
   m_ObjectHideFlags: 0
@@ -27045,6 +27051,7 @@ MonoBehaviour:
   invertTiltFB: 0
   tiltSmoothness: 5
   tiltSensitivity: 1.5
+  tutorialTiltEnabled: 0
 --- !u!4 &6774322841760932798
 Transform:
   m_ObjectHideFlags: 0

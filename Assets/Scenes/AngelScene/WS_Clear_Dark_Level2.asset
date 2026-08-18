@@ -16,9 +16,9 @@ MonoBehaviour:
   fogEnabled: 1
   fogColor: {r: 0, g: 0, b: 0, a: 1}
   fogDensity: 0.044
-  lightColor: {r: 0.16470589, g: 0.28235295, b: 0.41960785, a: 1}
-  lightIntensity: 0.25
-  ambientColor: {r: 0.13181199, g: 0.14935063, b: 0.19245279, a: 1}
+  lightColor: {r: 0.13565682, g: 0.22456998, b: 0.3283019, a: 1}
+  lightIntensity: 0.2
+  ambientColor: {r: 0.10190808, g: 0.11397784, b: 0.14716971, a: 1}
   skyboxTint: {r: 0.38039216, g: 0.4, b: 0.5019608, a: 1}
   skyboxExposure: 0.22
   ambientClip: {fileID: 8300000, guid: e7e86a5b2e525c048842783afa92acec, type: 3}

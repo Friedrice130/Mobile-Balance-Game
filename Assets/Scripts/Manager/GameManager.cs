@@ -1,12 +1,17 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public enum GameState { Countdown, Playing, GameOver, GameWin }
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    
+
+    [Header("Level Settings")]
+    public bool useTutorial = false;
+    public bool useCountdown = true;
+
     [Header("Game State")]
     public GameState currentState;
     public UIManager uiManager;
@@ -22,10 +27,51 @@ public class GameManager : MonoBehaviour
     public float CurrentTime => currentTime;
     public float MaxTime => levelTimeInSeconds;
 
-    void Awake()
+    /*void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+    }*/
+
+    void Awake()
+    {
+        Debug.Log("GameManager Awake");
+
+        if (Instance != null && Instance != this)
+        {
+            Debug.Log("Duplicate GameManager destroyed");
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("GameManager Destroyed");
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Time.timeScale = 1f;
+
+        currentState = GameState.Countdown;
+        currentTime = levelTimeInSeconds;
+
+        uiManager = FindAnyObjectByType<UIManager>();
+
+        StartCoroutine(StartLevelRoutine());
     }
 
     void Start()
@@ -35,21 +81,37 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlayMusic(TempBGM);
         }
         
-        StartCoroutine(StartLevelRoutine());
+        //StartCoroutine(StartLevelRoutine());
     }
 
     private IEnumerator StartLevelRoutine()
     {
-        //currentState = GameState.Countdown;
+        Debug.Log("StartLevelRoutine");
+        currentState = GameState.Countdown;
 
         if (uiManager != null)
         {
             if (isInfiniteTime) uiManager.SetInfiniteTimerDisplay();
             else uiManager.UpdateTimerDisplay(levelTimeInSeconds);
         }
-        
-        yield return StartCoroutine(uiManager.PlayCountdownUI());
 
+        if (useTutorial)
+        {
+            FindAnyObjectByType<TutorialManager>().BeginTutorial();
+            yield break; // Tutorial will start gameplay later
+        }
+
+        if (useCountdown)
+        {
+            yield return StartCoroutine(uiManager.PlayCountdownUI());
+        }
+
+        BeginGameplay();
+
+    }
+
+    public void BeginGameplay()
+    {
         currentTime = levelTimeInSeconds;
         currentState = GameState.Playing;
     }
@@ -100,9 +162,20 @@ public class GameManager : MonoBehaviour
 
         if (uiManager != null)
         {
-            int actualScore = ScoreManager.Instance.FinalScore;
-            int displayScore = ScoreManager.Instance.DisplayScore;
-            Rank rank = ScoreManager.Instance.FinalRank;
+            int displayScore;
+            Rank rank;
+
+            if (useTutorial)
+            {
+                // Tutorial level: force high score
+                displayScore = 999;
+                rank = Rank.SPlus;
+            }
+            else
+            {
+                displayScore = ScoreManager.Instance.DisplayScore;
+                rank = ScoreManager.Instance.FinalRank;
+            }
 
             uiManager.ShowGameWin(displayScore, rank);
         }

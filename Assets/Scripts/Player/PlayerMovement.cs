@@ -40,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
     public SoundData footstepSound; 
     public float footstepInterval = 0.4f; // How fast the player takes a step
     private float footstepTimer = 0f;
-    
+
+    public bool tutorialMovementEnabled = false;
+
     private Rigidbody rb;
     private float currentForwardSpeed;
     private bool isHolding;
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         currentHeading = Vector3.ProjectOnPlane(transform.forward, Vector3.up).normalized;
     }
 
-    void Update()
+    /*void Update()
     {
         isHolding = false;
         inputDeltaX = 0f;
@@ -128,6 +130,69 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Ignore movement if this touch started on a UI element
+        if (ignoreCurrentInput) return;
+
+        // Valid movement input
+        isHolding = true;
+        targetStrafeOffset += inputDeltaX * strafeSensitivity;
+        targetStrafeOffset = Mathf.Clamp(targetStrafeOffset, -maxStrafeX, maxStrafeX);
+    }*/
+
+    void Update()
+    {
+        isHolding = false;
+        inputDeltaX = 0f;
+
+        // Check if tutorial is currently active
+        bool isTutorialActive = GameManager.Instance != null &&
+                                 GameManager.Instance.useTutorial &&
+                                 GameManager.Instance.currentState == GameState.Countdown;
+
+        // Only allow input if the game state is Playing OR if we are currently in the interactive Tutorial steps
+        if (GameManager.Instance != null &&
+            GameManager.Instance.currentState != GameState.Playing)
+        {
+            if (!tutorialMovementEnabled)
+                return;
+        }
+
+        // Do not process any input when game paused
+        if (Time.timeScale == 0f) return;
+
+        bool isPressing = false;
+        bool justPressed = false;
+
+        // Mobile Touch Input
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            isPressing = true;
+            justPressed = Touchscreen.current.primaryTouch.press.wasPressedThisFrame;
+            inputDeltaX = Touchscreen.current.primaryTouch.delta.ReadValue().x / Screen.width;
+        }
+        // PC Editor Fallback Input
+        else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+        {
+            isPressing = true;
+            justPressed = Mouse.current.leftButton.wasPressedThisFrame;
+            inputDeltaX = Mouse.current.delta.ReadValue().x * 0.05f;
+        }
+
+        if (!isPressing)
+        {
+            ignoreCurrentInput = false;
+            return;
+        }
+
+        if (justPressed)
+        {
+            // Don't ignore inputs if touch hits tutorial UI overlay during tutorial mode
+            if (!isTutorialActive && EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            {
+                ignoreCurrentInput = true;
+            }
+        }
+
+        // Ignore movement if this touch started on a blocking UI element
         if (ignoreCurrentInput) return;
 
         // Valid movement input

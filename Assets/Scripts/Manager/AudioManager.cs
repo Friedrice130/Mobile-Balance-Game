@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource uiSource2D;
     private AudioSource musicSource;
+    private List<AudioSource> activeLoopingSources = new List<AudioSource>();
 
     void Awake()
     {
@@ -116,6 +117,8 @@ public class AudioManager : MonoBehaviour
         if (sfxMixerGroup != null) source.outputAudioMixerGroup = sfxMixerGroup;
 
         source.Play();
+
+        activeLoopingSources.Add(source);
         
         return source;
     }
@@ -161,5 +164,14 @@ public class AudioManager : MonoBehaviour
         {
             lightning.StopStorm();
         }
+
+        foreach (AudioSource loopingSource in activeLoopingSources)
+        {
+            if (loopingSource != null)
+            {
+                loopingSource.Stop();
+            }
+        }
+        activeLoopingSources.Clear();
     }
 }
