@@ -144,6 +144,14 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    public void StopMusic()
+    {
+        if (musicSource != null && musicSource.isPlaying)
+        {
+            musicSource.Stop();
+        }
+    }
+
     public void StopAllGameplayAudio()
     {
         if (musicSource != null && musicSource.isPlaying) musicSource.Stop();

@@ -790,9 +790,9 @@ MonoBehaviour:
   chapterSelectPanel: {fileID: 1543927451}
   defaultPlayBuildIndex: 1
   chapter1BuildIndex: 1
-  chapter2BuildIndex: 2
-  chapter3BuildIndex: 5
-  chapter4BuildIndex: 8
+  chapter2BuildIndex: 3
+  chapter3BuildIndex: 6
+  chapter4BuildIndex: 9
   mainMenuBGM: {fileID: 11400000, guid: 4cfd2f063f432ad408def702b29d9aaf, type: 2}
   mainMixer: {fileID: 24100000, guid: 21cc61f1d9dd83e4aaabb0c1e114e70d, type: 2}
 --- !u!114 &720584670

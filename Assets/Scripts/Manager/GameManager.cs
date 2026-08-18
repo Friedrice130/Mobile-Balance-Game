@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                AudioManager.Instance.StopAllGameplayAudio();
+                AudioManager.Instance.StopMusic();
             }
         }
 
