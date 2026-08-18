@@ -44622,7 +44622,7 @@ GameObject:
   - component: {fileID: 815171031}
   m_Layer: 7
   m_Name: NewWineGlass (2)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48762,6 +48762,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1251592543623871872, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+      propertyPath: m_fontStyle
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2425902529501117898, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -48842,6 +48846,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4011309725837233815, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 9168851760062330343, guid: 20a8661354d8c9547a24aca74181b500, type: 2}
+    - target: {fileID: 4142233623327712684, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6849150410583614659, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: trayBalancer
       value: 
@@ -48849,6 +48861,10 @@ PrefabInstance:
     - target: {fileID: 8623815265148816516, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
       propertyPath: m_Name
       value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623815265148816516, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60188,7 +60204,7 @@ PrefabInstance:
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: uiManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1327844615}
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: isInfiniteTime
       value: 0
@@ -68912,6 +68928,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327332707}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1327844615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6849150410583614659, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+  m_PrefabInstance: {fileID: 901739666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54b60e4e99f8894bb3cadde7d23307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
 --- !u!1001 &1329681952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93894,7 +93921,7 @@ GameObject:
   - component: {fileID: 1921991173}
   m_Layer: 7
   m_Name: NewWineGlass (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108798,7 +108825,7 @@ GameObject:
   - component: {fileID: 497040551748264898}
   m_Layer: 7
   m_Name: NewWineGlass
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

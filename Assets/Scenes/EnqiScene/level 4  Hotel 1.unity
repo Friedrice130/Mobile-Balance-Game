@@ -9402,7 +9402,7 @@ PrefabInstance:
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: uiManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 670682191}
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: isInfiniteTime
       value: 0
@@ -21065,6 +21065,17 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &670682191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6849150410583614659, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+  m_PrefabInstance: {fileID: 1798348399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54b60e4e99f8894bb3cadde7d23307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
 --- !u!43 &671757490
 Mesh:
   m_ObjectHideFlags: 0
@@ -66102,6 +66113,10 @@ PrefabInstance:
     - target: {fileID: 7163543132190179657, guid: 9079f3dd801396d479c047ed9a251548, type: 3}
       propertyPath: m_Name
       value: WineGlass_New
+      objectReference: {fileID: 0}
+    - target: {fileID: 7163543132190179657, guid: 9079f3dd801396d479c047ed9a251548, type: 3}
+      propertyPath: m_TagString
+      value: Item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
