@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -142,6 +142,14 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = data.clips[0];
         musicSource.volume = data.maxVolume; 
         musicSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        if (musicSource != null && musicSource.isPlaying)
+        {
+            musicSource.Stop();
+        }
     }
 
     public void StopAllGameplayAudio()

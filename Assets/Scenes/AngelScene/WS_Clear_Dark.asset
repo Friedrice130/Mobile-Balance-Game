@@ -21,7 +21,7 @@ MonoBehaviour:
   ambientColor: {r: 0.13181199, g: 0.14935063, b: 0.19245279, a: 1}
   skyboxTint: {r: 0.38039216, g: 0.4, b: 0.5019608, a: 1}
   skyboxExposure: 0.22
-  ambientClip: {fileID: 8300000, guid: a617203e41e25cc4f9f68ac9d3680608, type: 3}
+  ambientClip: {fileID: 0}
   ambientVolume: 1
   rainIntensity: 0
   rainColor: {r: 0.7, g: 0.8, b: 0.9, a: 0.35}
