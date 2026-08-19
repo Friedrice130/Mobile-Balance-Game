@@ -29,31 +29,43 @@ public class ScoreManager : MonoBehaviour
         droppedItems++;
     }
 
-    public int RemainingItems => totalItems - droppedItems;
+    // Clamp remaining items so it never drops below 0 if droppedItems exceeds totalItems
+    public int RemainingItems => Mathf.Max(0, totalItems - droppedItems);
 
     public int TotalItems => totalItems;
 
-    public int FinalScore //for Rank
+    public int FinalScore // for Rank
     {
         get
         {
-            float itemScore = ((float)RemainingItems / TotalItems) * 50f;
-            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 50f;
+            if (TotalItems <= 0) return 0; // Prevent divide by zero
 
-            return Mathf.RoundToInt(itemScore + timeScore);
+            float itemScore = ((float)RemainingItems / TotalItems) * 50f;
+
+            // Clamp CurrentTime so negative time doesn't drag the score down
+            float validTime = Mathf.Max(0f, GameManager.Instance.CurrentTime);
+            float timeScore = (validTime / GameManager.Instance.MaxTime) * 50f;
+
+            // Ensures final score is never below 0
+            return Mathf.Max(0, Mathf.RoundToInt(itemScore + timeScore));
         }
     }
 
-    public int DisplayScore //for Score 4 digits
+    public int DisplayScore // for Score 4 digits
     {
         get
         {
+            if (TotalItems <= 0) return 0;
+
             float itemScore = ((float)RemainingItems / TotalItems) * 50f;
-            float timeScore = (GameManager.Instance.CurrentTime / GameManager.Instance.MaxTime) * 50f;
+
+            float validTime = Mathf.Max(0f, GameManager.Instance.CurrentTime);
+            float timeScore = (validTime / GameManager.Instance.MaxTime) * 50f;
 
             float totalScore = itemScore + timeScore;
 
-            return Mathf.RoundToInt(totalScore * 10f);
+            // Ensures display score is never below 0
+            return Mathf.Max(0, Mathf.RoundToInt(totalScore * 10f));
         }
     }
 
