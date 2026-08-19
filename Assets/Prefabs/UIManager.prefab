@@ -6669,7 +6669,7 @@ MonoBehaviour:
   invertToggleFB: {fileID: 4265632341799203770}
   mainMixer: {fileID: 24100000, guid: 21cc61f1d9dd83e4aaabb0c1e114e70d, type: 2}
   masterSlider: {fileID: 5375333890090494862}
-  musicSlider: {fileID: 0}
+  musicSlider: {fileID: 6353510340819704362}
   sfxSlider: {fileID: 6967120588845249294}
   countdownBeepSound: {fileID: 11400000, guid: 3d0ad3bd72315d8409f74e5cf871b35e, type: 2}
   countdownStartSound: {fileID: 11400000, guid: 381cb07e87438b44385ffbd94ff1cfd9, type: 2}
