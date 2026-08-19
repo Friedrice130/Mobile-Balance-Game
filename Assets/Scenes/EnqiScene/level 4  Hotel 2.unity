@@ -14448,7 +14448,7 @@ PrefabInstance:
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: TempBGM
       value: 
-      objectReference: {fileID: 11400000, guid: 39b7b58b24e727c49a69eb2d8b6c6c31, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: uiManager
       value: 

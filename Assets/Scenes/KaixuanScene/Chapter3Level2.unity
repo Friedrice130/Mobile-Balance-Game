@@ -103584,7 +103584,7 @@ MonoBehaviour:
   uiManager: {fileID: 1504334568}
   isInfiniteTime: 0
   levelTimeInSeconds: 90
-  TempBGM: {fileID: 11400000, guid: 219910c6f53e4744ebe5ef3dfd1d77cf, type: 2}
+  TempBGM: {fileID: 0}
 --- !u!114 &2008049717826704772
 MonoBehaviour:
   m_ObjectHideFlags: 0
