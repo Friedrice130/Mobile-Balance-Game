@@ -396,10 +396,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   topSpeed: 5
-  acceleration: 5
-  strafeSensitivity: 15
-  maxStrafeX: 4
-  strafeSmoothness: 5
+  acceleration: 0.5
+  strafeSensitivity: 5
+  maxStrafeX: 3
+  strafeSmoothness: 0.5
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -412,8 +412,9 @@ MonoBehaviour:
   groundCheckHeight: 1.4
   groundOffset: 2
   lookAheadDistance: 0.3
-  bumpHarshness: 20
+  bumpHarshness: 3
   alignToSlopes: 1
-  slopeSmoothness: 10
+  slopeSmoothness: 3
   footstepSound: {fileID: 11400000, guid: 80fc488a4ec33a24f838edb4987fd4f9, type: 2}
   footstepInterval: 0.4
+  tutorialMovementEnabled: 0

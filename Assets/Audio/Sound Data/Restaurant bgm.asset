@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Restaurant bgm
   m_EditorClassIdentifier: Assembly-CSharp::SoundData
   clips:
-  - {fileID: 8300000, guid: c867fca6cd65dac41b60a14bf439d716, type: 3}
+  - {fileID: 8300000, guid: 7303d3ba57fa79c42a070020b5964a31, type: 3}
   minVolume: 0.8
   maxVolume: 1
   minPitch: 0.9
