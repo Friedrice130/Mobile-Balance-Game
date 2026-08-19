@@ -27,13 +27,13 @@ EditorBuildSettings:
     path: Assets/Scenes/EnqiScene/level 4  Hotel 3.unity
     guid: d2c554518ea9d804fb2099dc134d3397
   - enabled: 1
-    path: "Assets/Scenes/KaixuanScene/Chapter4Level1\u2014\u20141.unity"
+    path: "Assets/Scenes/KaixuanScene/Archive/Chapter4Level1\u2014\u20141.unity"
     guid: 3ed57201f05c708438124e64b266a0cc
   - enabled: 1
-    path: Assets/Scenes/KaixuanScene/Chapter4Level2.unity
+    path: Assets/Scenes/KaixuanScene/Archive/Chapter4Level2.unity
     guid: c6a6fb0e6048ccf4fb795bbdeaaddebb
   - enabled: 1
-    path: Assets/Scenes/KaixuanScene/Chapter4Level3.unity
+    path: Assets/Scenes/KaixuanScene/Archive/Chapter4Level3.unity
     guid: c3f534fb7a1fb1c49bce375f7530480d
   - enabled: 1
     path: Assets/Scenes/AngelScene/Chapter4Level1.unity
