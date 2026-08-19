@@ -62315,6 +62315,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+--- !u!114 &1504334568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6849150410583614659, guid: 866e21fd269a0a04cbcc2f99b92e0234, type: 3}
+  m_PrefabInstance: {fileID: 1504334567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54b60e4e99f8894bb3cadde7d23307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
 --- !u!1001 &1510348564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103570,7 +103581,7 @@ MonoBehaviour:
   useTutorial: 0
   useCountdown: 1
   currentState: 1
-  uiManager: {fileID: 0}
+  uiManager: {fileID: 1504334568}
   isInfiniteTime: 0
   levelTimeInSeconds: 90
   TempBGM: {fileID: 11400000, guid: 219910c6f53e4744ebe5ef3dfd1d77cf, type: 2}

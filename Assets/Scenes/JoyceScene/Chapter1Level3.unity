@@ -31983,7 +31983,7 @@ MonoBehaviour:
   currentState: 1
   uiManager: {fileID: 8639632236673503370}
   isInfiniteTime: 0
-  levelTimeInSeconds: 240
+  levelTimeInSeconds: 400
   TempBGM: {fileID: 11400000, guid: 073457ec11170b44c886cbb43c710c13, type: 2}
 --- !u!4 &5085456222961968187
 Transform:
