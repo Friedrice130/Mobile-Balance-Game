@@ -60573,7 +60573,7 @@ MonoBehaviour:
   currentState: 1
   uiManager: {fileID: 175105401}
   isInfiniteTime: 0
-  levelTimeInSeconds: 600
+  levelTimeInSeconds: 900
   TempBGM: {fileID: 0}
 --- !u!4 &2006462898068507458
 Transform:

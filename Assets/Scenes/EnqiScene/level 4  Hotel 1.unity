@@ -9432,7 +9432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5065059080669269855, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: levelTimeInSeconds
-      value: 60
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7184743294963013847, guid: b191885c03f12a74bb05464aa73864b9, type: 3}
       propertyPath: m_LocalPosition.x
