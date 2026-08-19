@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -144,6 +144,14 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    public void StopMusic()
+    {
+        if (musicSource != null && musicSource.isPlaying)
+        {
+            musicSource.Stop();
+        }
+    }
+
     public void StopAllGameplayAudio()
     {
         if (musicSource != null && musicSource.isPlaying) musicSource.Stop();
@@ -153,16 +161,22 @@ public class AudioManager : MonoBehaviour
             if (source != null && source.isPlaying) source.Stop();
         }
 
-        DynamicWeatherSystem.AudioModule weatherAudio = FindObjectOfType<DynamicWeatherSystem.AudioModule>();
+        DynamicWeatherSystem.AudioModule weatherAudio = FindAnyObjectByType<DynamicWeatherSystem.AudioModule>();
         if (weatherAudio != null)
         {
             weatherAudio.StopWeatherAudio();
         }
         
-        LightningGenerator lightning = FindObjectOfType<LightningGenerator>();
+        LightningGenerator lightning = FindAnyObjectByType<LightningGenerator>();
         if (lightning != null)
         {
             lightning.StopStorm();
+        }
+
+        RedLightManager redLightGame = FindAnyObjectByType<RedLightManager>();
+        if (redLightGame != null)
+        {
+            redLightGame.StopMiniGame();
         }
 
         foreach (AudioSource loopingSource in activeLoopingSources)

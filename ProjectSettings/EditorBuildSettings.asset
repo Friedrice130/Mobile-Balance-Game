@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/JoyceScene/MainMenu.unity
     guid: 83ce5a9792f8e834a817dfe9b50dc5dd
   - enabled: 1
-    path: Assets/Scenes/JoyceScene/Level 1.unity
+    path: Assets/Scenes/JoyceScene/Chapter1Level1.unity
     guid: 34d63cc086b0ee747a238ca20c039b33
+  - enabled: 1
+    path: Assets/Scenes/JoyceScene/Chapter1Level2.unity
+    guid: 204c386a09f893c4499eec63048f9ba7
   - enabled: 1
     path: Assets/Scenes/EnqiScene/level 4  Hotel 1.unity
     guid: a426f294339e4204699a4664e3d8c668
